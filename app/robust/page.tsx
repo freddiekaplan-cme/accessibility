@@ -1,18 +1,28 @@
 import React from "react"
+import PrincipleTitle from "../components/PrincipleTitle"
+import Criteria from "../components/Criteria"
+import { criteria } from "../constants/Criterias"
 
 const page = () => {
+	const wcag412 = criteria.find((item) => item.wcag === "4.1.2")
+
+	if (!wcag412) {
+		return <div>Error loading information about WCAG 4.1.2.</div>
+	}
+
 	return (
-		<div className="flex flex-col p-8">
-			<h2 className="text-center text-lg font-bold">Robust</h2>
-			<article>
-				<h3>Name, Role, Value</h3>
-				<p>Using a header element gives an automatic role=banner.</p>
-				<p>
-					WCAG 2.1 Success Criterion 4.1.2 | EN 9.4.1.2 |{" "}
-					<span lang="sv">Webbriktlinjer Namn, roll, värde</span>
-				</p>
-			</article>
-		</div>
+		<>
+			<PrincipleTitle title="Robust" />
+			<Criteria
+				criteriaTitle={wcag412.criteriaTitle}
+				text={wcag412.text}
+				wcag={wcag412.wcag}
+				wcagLink={wcag412.wcagLink}
+				en={wcag412.en}
+				webb={wcag412.webb}
+				webbLink={wcag412.webbLink}
+			/>
+		</>
 	)
 }
 
