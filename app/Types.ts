@@ -13,3 +13,7 @@ export interface CriteriaType {
 export interface PrincipleTitleType {
 	title: string
 }
+
+export interface FormDataType {
+	name: string
+}

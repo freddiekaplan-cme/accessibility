@@ -4,7 +4,7 @@ import React from "react"
 const Header = () => {
 	return (
 		<header className="flex flex-col p-8 justify-center">
-			<h1 className="flex flex-row font-bold text-xl">
+			<h1 className="flex flex-row font-bold text-3xl">
 				Accessibility Project
 			</h1>
 			<nav className="flex flex-row gap-4 pt-2">

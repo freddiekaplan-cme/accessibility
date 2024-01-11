@@ -12,11 +12,11 @@ const Criteria: React.FC<CriteriaType> = ({
 	webbLink,
 }) => {
 	return (
-		<div className="flex flex-col p-8">
-			<article>
-				<h3>{criteriaTitle}</h3>
+		<>
+			<div className="my-8 bg-sky-800 p-8 text-white">
+				<h3 className="font-bold text-lg">{criteriaTitle}</h3>
 				<p>{text}</p>
-				<nav className="pt-8">
+				<nav className="mt-4">
 					<Link href={wcagLink}>
 						WCAG 2.1 Success Criterion {wcag}
 					</Link>{" "}
@@ -25,8 +25,8 @@ const Criteria: React.FC<CriteriaType> = ({
 						<span lang="sv">Webbriktlinjer: {webb}</span>
 					</Link>
 				</nav>
-			</article>
-		</div>
+			</div>
+		</>
 	)
 }
 
