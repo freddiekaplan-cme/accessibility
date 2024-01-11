@@ -55,7 +55,7 @@ const Page = () => {
 
 	return (
 		<div className="flex flex-col items-center">
-			<div className="flex flex-col p-8 max-w-3xl">
+			<div className="flex flex-col max-w-3xl w-[100%] p-4 sm:p-8">
 				<PrincipleTitle title="Robust" />
 				<section>
 					{" "}
@@ -71,7 +71,7 @@ const Page = () => {
 						this automatically.
 					</p>
 					<div className="my-8 bg-slate-700 text-white">
-						<div className="p-8">
+						<div className="p-4 sm:p-8">
 							<div className="mb-4 font-bold">
 								Example: Semantic HTML
 							</div>
@@ -131,7 +131,7 @@ const Page = () => {
 						parts like aria roles and labels are present.
 					</p>
 					<div className="my-8 bg-slate-700 text-white">
-						<div className="p-8">
+						<div className="p-4 sm:p-8">
 							<div className="mb-4 font-bold">
 								Example: My Cool Form
 							</div>
@@ -148,39 +148,51 @@ const Page = () => {
 										&lt;form
 										onSubmit=&#123;handleSubmit&#125;
 									</div>
-									<div className="ml-8">&lt;div&gt;</div>
-									<div className="ml-16">
+									<div className="ml-4 sm:ml-8">
+										&lt;div&gt;
+									</div>
+									<div className="ml-8 sm:ml-16">
 										&lt;label
 										htmlFor=&quot;name&quot;&gt;Name:&lt;/label&gt;
 									</div>
-									<div className="ml-16">&lt;input</div>
-									<div className="ml-24">
+									<div className="ml-8 sm:ml-16">
+										&lt;input
+									</div>
+									<div className="ml-12 sm:ml-24">
 										type=&quot;text&quot;
 									</div>
-									<div className="ml-24">
+									<div className="ml-12 sm:ml-24">
 										id=&quot;name&quot;
 										name=&quot;name&quot;
 									</div>
-									<div className="ml-24">
+									<div className="ml-12 sm:ml-24">
 										value=&#123;formData.name&#125;
 									</div>
-									<div className="ml-24">
+									<div className="ml-12 sm:ml-24">
 										onChange=&#123;handleChange&#125;
 									</div>
-									<div className="ml-24">required</div>
-									<div className="ml-16">/&gt;</div>
-									<div className="ml-8">&lt;/div&gt;</div>
-									<div className="ml-8">&lt;div&gt;</div>
-									<div className="ml-16">
+									<div className="ml-12 sm:ml-24">
+										required
+									</div>
+									<div className="ml-8 sm:ml-16">/&gt;</div>
+									<div className="ml-4 sm:ml-8">
+										&lt;/div&gt;
+									</div>
+									<div className="ml-4 sm:ml-8">
+										&lt;div&gt;
+									</div>
+									<div className="ml-8 sm:ml-16">
 										&lt;button
 										type=&quot;submit&quot;&gt;Submit&lt;/button&gt;
 									</div>
-									<div className="ml-8">&lt;/div&gt;</div>
+									<div className="ml-4 sm:ml-8">
+										&lt;/div&gt;
+									</div>
 									<div>&lt;/form&gt;</div>
 								</code>
 							</div>
 							<p>Which looks something like this:</p>
-							<div className="bg-white text-black flex justify-center p-8 my-8">
+							<div className="bg-white text-black flex justify-center p-4 sm:p-8 my-8">
 								<form onSubmit={handleSubmit}>
 									<div>
 										<div className="font-bold mb-4">
@@ -225,37 +237,49 @@ const Page = () => {
 										&lt;form
 										onSubmit=&#123;handleSubmit&#125;
 									</div>
-									<div className="ml-8">&lt;div&gt;</div>
+									<div className="ml-4 sm:ml-8">
+										&lt;div&gt;
+									</div>
 
-									<div className="ml-16">&lt;input</div>
-									<div className="ml-24">
+									<div className="ml-8 sm:ml-16">
+										&lt;input
+									</div>
+									<div className="ml-12 sm:ml-24">
 										type=&quot;text&quot;
 									</div>
 									<div
 										aria-label="Highlighted code"
-										className="ml-24 text-green-400"
+										className="ml-12 sm:ml-24 text-green-400"
 									>
 										placeholder=&quot;Name&quot;
 									</div>
-									<div className="ml-24">
+									<div className="ml-12 sm:ml-24">
 										id=&quot;name&quot;
 										name=&quot;name&quot;
 									</div>
-									<div className="ml-24">
+									<div className="ml-12 sm:ml-24">
 										value=&#123;formData.name&#125;
 									</div>
-									<div className="ml-24">
+									<div className="ml-12 sm:ml-24">
 										onChange=&#123;handleChange&#125;
 									</div>
-									<div className="ml-24">required</div>
-									<div className="ml-16">/&gt;</div>
-									<div className="ml-8">&lt;/div&gt;</div>
-									<div className="ml-8">&lt;div&gt;</div>
-									<div className="ml-16">
+									<div className="ml-12 sm:ml-24">
+										required
+									</div>
+									<div className="ml-8 sm:ml-16">/&gt;</div>
+									<div className="ml-4 sm:ml-8">
+										&lt;/div&gt;
+									</div>
+									<div className="ml-4 sm:ml-8">
+										&lt;div&gt;
+									</div>
+									<div className="ml-8 sm:ml-16">
 										&lt;button
 										type=&quot;submit&quot;&gt;Submit&lt;/button&gt;
 									</div>
-									<div className="ml-8">&lt;/div&gt;</div>
+									<div className="ml-4 sm:ml-8">
+										&lt;/div&gt;
+									</div>
 									<div>&lt;/form&gt;</div>
 								</code>
 							</div>
@@ -264,7 +288,7 @@ const Page = () => {
 								label next to the input.
 							</p>
 
-							<div className="bg-white text-black flex justify-center p-8 my-8">
+							<div className="bg-white text-black flex justify-center p-4 sm:p-8 my-8">
 								<form onSubmit={secondHandleSubmit}>
 									<div id="nameform" className="font-bold">
 										Name Form
@@ -306,7 +330,7 @@ const Page = () => {
 								above. Uh-oh!
 							</p>
 							<p>
-								So what&apos;s my solution? Since the{" "}
+								So what&apos;s the solution? Since the{" "}
 								<code className="bg-slate-800 text-white">
 									&lt;label&gt;
 								</code>{" "}
@@ -322,6 +346,22 @@ const Page = () => {
 								MUST have a visible label of some sort.{" "}
 							</p>
 							<p>Hm! Ok, I might have an idea.</p>
+							<p>
+								I have a descriptive text at the top of my form,
+								that could act as my visible label by adding{" "}
+								<code className="bg-slate-800 text-white">
+									aria-labelledby
+								</code>{" "}
+								to the{" "}
+								<code className="bg-slate-800 text-white">
+									&lt;input&gt;
+								</code>{" "}
+								element and a corresponding{" "}
+								<code className="bg-slate-800 text-white">
+									id
+								</code>{" "}
+								to the text.
+							</p>
 
 							<div className="bg-slate-800 text-white my-8">
 								<code>
@@ -339,59 +379,75 @@ const Page = () => {
 										&lt;form
 										onSubmit=&#123;handleSubmit&#125;
 									</div>
-									<div className="ml-8">&lt;div&gt;</div>
+									<div className="ml-4 sm:ml-8">
+										&lt;div&gt;
+									</div>
 
-									<div className="ml-16">&lt;input</div>
-									<div className="ml-24">
+									<div className="ml-8 sm:ml-16">
+										&lt;input
+									</div>
+									<div className="ml-12 sm:ml-24">
 										type=&quot;text&quot;
 									</div>
-									<div className="ml-24">
+									<div className="ml-12 sm:ml-24">
 										placeholder=&quot;Name&quot;
 									</div>
-									<div className="ml-24">
+									<div className="ml-12 sm:ml-24">
 										id=&quot;name&quot;
 										name=&quot;name&quot;
 									</div>
-									<div className="ml-24">
+									<div className="ml-12 sm:ml-24">
 										value=&#123;formData.name&#125;
 									</div>
-									<div className="ml-24">
+									<div className="ml-12 sm:ml-24">
 										onChange=&#123;handleChange&#125;
 									</div>
 									<div
 										aria-label="Highlighted code"
-										className="ml-24 text-green-400"
+										className="ml-12 sm:ml-24 text-green-400"
 									>
 										aria-labelledby=&quot;nameform&quot;
 									</div>
-									<div className="ml-24">required</div>
-									<div className="ml-16">/&gt;</div>
-									<div className="ml-8">&lt;/div&gt;</div>
-									<div className="ml-8">&lt;div&gt;</div>
-									<div className="ml-16">
+									<div className="ml-12 sm:ml-24">
+										required
+									</div>
+									<div className="ml-8 sm:ml-16">/&gt;</div>
+									<div className="ml-4 sm:ml-8">
+										&lt;/div&gt;
+									</div>
+									<div className="ml-4 sm:ml-8">
+										&lt;div&gt;
+									</div>
+									<div className="ml-8 sm:ml-16">
 										&lt;button
 										type=&quot;submit&quot;&gt;Submit&lt;/button&gt;
 									</div>
-									<div className="ml-8">&lt;/div&gt;</div>
+									<div className="ml-4 sm:ml-8">
+										&lt;/div&gt;
+									</div>
 									<div>&lt;/form&gt;</div>
 								</code>
 							</div>
+							<p>A few final notes:</p>
+							<p>
+								Textboxes like an{" "}
+								<code className="bg-slate-800 text-white">
+									&lt;input&gt;
+								</code>{" "}
+								can&apos;t use{" "}
+								<code className="bg-slate-800 text-white">
+									aria-label
+								</code>{" "}
+								on it&apos;s own beacause it&apos;s supposed to
+								have a separate, visible{" "}
+								<code className="bg-slate-800 text-white">
+									&lt;label&gt;
+								</code>{" "}
+								element.
+							</p>
 
 							<p>
-								Since I already have a descriptive little title
-								at the top, I can use it as a label by adding{" "}
-								<code className="bg-slate-800 text-white">
-									aria-labelledby
-								</code>{" "}
-								and a corresponding{" "}
-								<code className="bg-slate-800 text-white">
-									id
-								</code>{" "}
-								in the element that will now act as a label for
-								this part of the form.
-							</p>
-							<p>
-								Please note that you should use a{" "}
+								You should use a{" "}
 								<code className="bg-slate-800 text-white">
 									&lt;label&gt;
 								</code>{" "}
@@ -399,8 +455,8 @@ const Page = () => {
 								<code className="bg-slate-800 text-white">
 									&lt;input&gt;
 								</code>{" "}
-								element and that another solution would&apos;ve
-								been to simply rework the{" "}
+								element, and that another solution is to simply
+								rework the{" "}
 								<code className="bg-slate-800 text-white">
 									&lt;label&gt;
 								</code>{" "}
@@ -408,8 +464,15 @@ const Page = () => {
 								like the title.
 							</p>
 							<p>
-								Now all accessibility checks are happy and I can
-								keep working on my site.
+								By using{" "}
+								<code className="bg-slate-800 text-white">
+									aria-labelledby
+								</code>
+								, several elements could reference the same{" "}
+								<code className="bg-slate-800 text-white">
+									id
+								</code>
+								.
 							</p>
 						</div>
 					</div>
