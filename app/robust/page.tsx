@@ -55,15 +55,14 @@ const Page = () => {
 
 	return (
 		<div className="flex flex-col items-center">
-			<div className="flex flex-col max-w-3xl w-[100%] p-4 sm:p-8">
-				<PrincipleTitle title="Robust" />
-				<section>
-					{" "}
-					<div className="pb-8 text-lg italic">
-						Content must be robust enough that it can be interpreted
+			<div className="flex flex-col max-w-3xl w-[100%] p-4 sm:m-8">
+				<PrincipleTitle
+					title="Robust"
+					quote="Content must be robust enough that it can be interpreted
 						by a wide variety of user agents, including assistive
-						technologies.
-					</div>
+						technologies."
+				/>
+				<section>
 					<p>
 						For a developer this means that a site needs to be built
 						with assistive technologies, like screen readers, in
@@ -110,9 +109,12 @@ const Page = () => {
 				</Link>
 
 				<article>
+					<h3 className="text-center text-xl font-bold mb-8">
+						Creating My Own Form
+					</h3>
 					<p>
 						So we&apos;ve established that you should use semantic
-						html whenever possible. But what happens if you code
+						HTML whenever possible. But what happens if you code
 						something that for any reason looks a bit different?
 						Let&apos;s take a look at at this specific criterion:
 					</p>
@@ -323,8 +325,8 @@ const Page = () => {
 							<p>
 								At this point everything looks ok and I get no
 								errors in my editor. However, since the label
-								for the input is missing, a visitor using a
-								screen reader, for example, will have trouble
+								for the input is missing, a visitor using
+								assistive technology will have trouble
 								interacting with the form — and my site will be
 								in violation of the WCAG 4.1.2 rule as stated
 								above. Uh-oh!
@@ -360,7 +362,7 @@ const Page = () => {
 								<code className="bg-slate-800 text-white">
 									id
 								</code>{" "}
-								to the text.
+								to the text.{" "}
 							</p>
 
 							<div className="bg-slate-800 text-white my-8">
@@ -428,6 +430,23 @@ const Page = () => {
 									<div>&lt;/form&gt;</div>
 								</code>
 							</div>
+							<p>
+								This works and fulfills the WCAG criterion, but
+								is &quot;Name Form&quot; as clear and
+								understandable as our original label of
+								&quot;Name&quot;? No, probably not since the
+								latter is the standard formulation. That&apos;s
+								why it&apos;s ususally a good idea to stick to
+								the establish method of{" "}
+								<code className="bg-slate-800 text-white">
+									&lt;input&gt;
+								</code>{" "}
+								and{" "}
+								<code className="bg-slate-800 text-white">
+									&lt;label&gt;
+								</code>{" "}
+								where possible.
+							</p>
 							<p>A few final notes:</p>
 							<p>
 								Textboxes like an{" "}
@@ -455,7 +474,7 @@ const Page = () => {
 								<code className="bg-slate-800 text-white">
 									&lt;input&gt;
 								</code>{" "}
-								element, and that another solution is to simply
+								element. Another solution would&dapos;ve been to
 								rework the{" "}
 								<code className="bg-slate-800 text-white">
 									&lt;label&gt;

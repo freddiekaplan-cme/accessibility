@@ -12,6 +12,7 @@ export interface CriteriaType {
 
 export interface PrincipleTitleType {
 	title: string
+	quote: string
 }
 
 export interface FormDataType {
