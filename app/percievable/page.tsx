@@ -4,12 +4,14 @@ import Criteria from "../components/Criteria"
 import { criteria } from "../constants/Criterias"
 import Image from "next/image"
 import keyboardImage from "../../public/pexels-josh-sorenson-1714205.webp"
+import boxImgae from "../../public/box.webp"
 import {
 	ComparisonChart,
 	UpdatedComparisonChart,
 } from "../components/ComparisonChart"
+import Link from "next/link"
 
-const page = () => {
+const Page = () => {
 	const wcag111 = criteria.find((item) => item.wcag === "1.1.1")
 	const wcag141 = criteria.find((item) => item.wcag === "1.4.1")
 	const wcag143 = criteria.find((item) => item.wcag === "1.4.3")
@@ -115,7 +117,7 @@ const page = () => {
 
 				<article>
 					<h3 className="text-center text-xl font-bold my-8">
-						My Comparison Chart
+						Color Alone is Not Enough
 					</h3>
 					<p>
 						Color is often used to convey information but keep in
@@ -226,7 +228,7 @@ const page = () => {
 								</code>
 							</div>
 							<p>
-								With some additional styling, an input of value
+								With some additional styling, an input of values
 								100 and 200 looks something like this:
 							</p>
 
@@ -238,11 +240,10 @@ const page = () => {
 							</div>
 
 							<p>
-								However, this is in violation of the WCAG in
-								this example since I&apos;m only using color to
-								show which value is higher than the other. I
-								need to add some more information to the chart
-								to make my component accessible.
+								However, if I look at the WCAG criterion above,
+								using only color to show information is not ok.
+								I need to add more visible elements to the
+								chart.
 							</p>
 							<div className="bg-slate-800 text-white my-8">
 								<code>
@@ -298,7 +299,6 @@ const page = () => {
 										&lt;div
 										className=&#123;firstChartStyle&#125;
 									</div>
-
 									<div className="ml-16 sm:ml-32">
 										<span
 											aria-label="Highlighted code"
@@ -374,13 +374,14 @@ const page = () => {
 							</div>
 
 							<p>
-								By adding a little more information to the chart
-								we can make it much more accessible. I put the
-								values inside the colored elements and also made
-								an inline style that calculates the ratio
-								between the two. So now a user is no longer
-								relying on just the color to find out the higher
-								and lower value.
+								By showing more information in my chart I can
+								make it much more accessible. I put the values
+								inside the colored elements and also made an
+								inline style that calculates the ratio between
+								the two. So now a user is no longer relying on
+								just the color to find out the higher and lower
+								value. Here demonstrated by inputting the values
+								of 200 and 150:
 							</p>
 							<div className="bg-white text-black flex justify-center p-4 sm:p-8 my-8">
 								<UpdatedComparisonChart
@@ -393,9 +394,14 @@ const page = () => {
 				</article>
 				<article>
 					<h3 className="text-center text-xl font-bold my-8">
-						Example 2
+						Contrasting Text Color
 					</h3>
-					<p>Article with example 2</p>
+					<p>
+						Contrasting colors is one of the most common
+						accessibility blunders online. I suspect it&apos;s
+						because it&apos;s hard to get exact, as described by
+						this WCAG criterion:
+					</p>
 					<Criteria
 						criteriaTitle={wcag143.criteriaTitle}
 						text={wcag143.text}
@@ -408,12 +414,142 @@ const page = () => {
 						webb={wcag143.webb}
 						webbLink={wcag143.webbLink}
 					/>
-				</article>
-				<article>
-					<h3 className="text-center text-xl font-bold my-8">
-						Example 3
-					</h3>
-					<p>Article with example 3</p>
+					<p>
+						Apart from a few exceptions, text visible on screen
+						needs to have a certain amount of contrast to the
+						background color. There are different levels of success:
+						AA and AAA.
+					</p>
+					<p>
+						AA is the minimum requirement and has the threshold
+						value of 4.5:1 that is mentioned in the criterion. This
+						is roughly what is needed to compensate for the loss of
+						vision of an 80-year-old.
+					</p>
+					<p>
+						To meet the higher requirement of AAA, a minimum
+						contrast of 7:1 is needed. This is based on the loss of
+						contrast sensitivity among users with low vision but
+						that do not use assistive technology.
+					</p>
+					<p>
+						As a comparison, black text on a white background has a
+						contrast of 21:1.
+					</p>
+					<div className="my-8 bg-slate-700 text-white">
+						<div className="p-4 sm:p-8">
+							<div className="mb-4 font-bold">
+								Example: Dark Mode
+							</div>
+							<p>
+								I&apos;m using dark mode on my site. In light
+								mode the text is black and the background is
+								white, in dark mode they are switched.
+							</p>
+							<p>
+								However, on some parts of the site I have a box
+								with another color:
+							</p>
+							<div className="bg-slate-800 text-white my-8">
+								<code>
+									<div>.box &#123;</div>
+
+									<div className="ml-4 sm:ml-8">
+										background-color: rgb(71, 85, 105);
+									</div>
+									<div className="ml-4 sm:ml-8">
+										border: 2px solid black;
+									</div>
+									<div className="ml-4 sm:ml-8">
+										padding: 1rem;
+									</div>
+
+									<div>&#125;</div>
+								</code>
+							</div>
+							<div className="bg-slate-800 text-white my-8">
+								<code>
+									<div>
+										&lt;div className=&quot;box&quot;&gt;
+									</div>
+									<div className="ml-4 sm:ml-8">
+										Lorem ipsum dolor sit amet, consectetur
+										adipis.
+									</div>
+									<div>&lt;/div &gt;</div>
+								</code>
+							</div>
+							<div className="bg-white text-black flex justify-center p-4 sm:p-8 my-8">
+								<div className=" border-black border-2 p-4 bg-slate-600 text-white">
+									Lorem ipsum dolor sit amet, consectetur
+									adipis.
+								</div>
+							</div>
+							<p>
+								All good, I&apos;m happy with my site when
+								viewing in dark mode and get an AAA rating for
+								my text when checking. But I&apos;ve forgotten
+								about light mode, and that all the text on the
+								site change to a black color while using it.
+							</p>
+							<div className="bg-white text-black flex justify-center p-4 sm:p-8 my-8">
+								<Image
+									className="border-black border-2 max-w-full sm:max-w-sm"
+									src={boxImgae}
+									alt="A dark gray box with the words 'Lorem ipsum dolor sit amet, consectetur
+									adipis.' inside. The text is black and hard to make out against the background color. "
+								/>
+							</div>
+							<p>
+								The solution is simple, just add white text
+								styling to the box class to be sure the text
+								will remain white regardless of mode. Sometimes
+								the hard part is to identify the issue at all.
+							</p>
+							<div className="bg-slate-800 text-white my-8">
+								<code>
+									<div>.box &#123;</div>
+									<div className="ml-4 sm:ml-8">
+										background-color: rgb(71, 85, 105);
+									</div>
+									<div className="ml-4 sm:ml-8">
+										border: 2px solid black;
+									</div>
+									<div className="ml-4 sm:ml-8">
+										<span
+											aria-label="Highlighted code"
+											className="text-green-400"
+										>
+											color: white;
+										</span>
+									</div>
+									<div className="ml-4 sm:ml-8">
+										padding: 1rem;
+									</div>
+
+									<div>&#125;</div>
+								</code>
+							</div>
+						</div>
+					</div>
+					<p>A couple of notes:</p>
+					<p>
+						Some web browsers, such as Google Chrome or Mozilla
+						Firefox, provide an Accessibility tab within their Web
+						Inspector tools. This tab allows you to check color
+						contrast easily. There are also plenty of other
+						resources available online,{" "}
+						<Link
+							className="underline"
+							href="https://coolors.co/contrast-checker/112a46-acc8e5"
+						>
+							like this tool from Coolors.
+						</Link>
+					</p>
+					<p>
+						Contrasting colors are not limited to text, here&apos;s
+						a criterion for graphic elements and images:
+					</p>
 					<Criteria
 						criteriaTitle={wcag1411.criteriaTitle}
 						text={wcag1411.text}
@@ -431,4 +567,4 @@ const page = () => {
 	)
 }
 
-export default page
+export default Page

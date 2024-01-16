@@ -23,6 +23,10 @@ export interface FormDataType {
 	name: string
 }
 
+export interface AgeFormDataType {
+	age: number | null
+}
+
 export interface ChartType {
 	firstValue: number
 	secondValue: number
