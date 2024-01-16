@@ -1,5 +1,17 @@
 export const criteria = [
 	{
+		criteriaTitle: "Non-text Content",
+		wcag: "1.1.1",
+		wcagLink: "https://www.w3.org/TR/WCAG21/#non-text-content",
+		en: "9.1.1.1",
+		webb: "Beskriv med text allt innehåll som inte är text",
+		webbLink:
+			"https://www.digg.se/webbriktlinjer/alla-webbriktlinjer/beskriv-med-text-allt-innehall-som-inte-ar-text",
+		text: "All non-text content that is presented to the user has a text alternative that serves the equivalent purpose.",
+		principle: "perceivable",
+		level: "A",
+	},
+	{
 		criteriaTitle: "Use of Color",
 		wcag: "1.4.1",
 		wcagLink: "https://www.w3.org/TR/WCAG21/#use-of-color",

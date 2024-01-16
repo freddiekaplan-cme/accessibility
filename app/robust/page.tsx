@@ -55,7 +55,7 @@ const Page = () => {
 
 	return (
 		<div className="flex flex-col items-center">
-			<div className="flex flex-col max-w-3xl w-[100%] p-4 sm:m-8">
+			<div className="flex flex-col max-w-3xl w-full p-4 sm:m-8">
 				<PrincipleTitle
 					title="Robust"
 					quote="Content must be robust enough that it can be interpreted
