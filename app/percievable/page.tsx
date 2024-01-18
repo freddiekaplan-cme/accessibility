@@ -4,7 +4,7 @@ import Criteria from "../components/Criteria"
 import { criteria } from "../constants/Criterias"
 import Image from "next/image"
 import keyboardImage from "../../public/pexels-josh-sorenson-1714205.webp"
-import boxImgae from "../../public/box.webp"
+import boxImage from "../../public/box.webp"
 import {
 	ComparisonChart,
 	UpdatedComparisonChart,
@@ -141,10 +141,11 @@ const Page = () => {
 							</div>
 							<p>
 								I&apos;ve made a component that takes two values
-								and returns two elements that get background
-								colors by different CSS classes. The higher
-								value get&apos;s a green color and the lower
-								value get&apos;s a red color.
+								and returns a chart consisting of two elements
+								that get their background colors by different
+								CSS classes. The higher value get&apos;s a green
+								color and the lower value get&apos;s a red
+								color.
 							</p>
 
 							<div className="bg-slate-800 text-white my-8">
@@ -241,9 +242,9 @@ const Page = () => {
 
 							<p>
 								However, if I look at the WCAG criterion above,
-								using only color to show information is not ok.
-								I need to add more visible elements to the
-								chart.
+								you can&apos;t rely solely on color to convey
+								information. I need to add more visible elements
+								to the chart.
 							</p>
 							<div className="bg-slate-800 text-white my-8">
 								<code>
@@ -375,13 +376,18 @@ const Page = () => {
 
 							<p>
 								By showing more information in my chart I can
-								make it much more accessible. I put the values
-								inside the colored elements and also made an
-								inline style that calculates the ratio between
-								the two. So now a user is no longer relying on
-								just the color to find out the higher and lower
-								value. Here demonstrated by inputting the values
-								of 200 and 150:
+								make it much more accessible. Since I already
+								have access to the values of each staple, I can
+								put them inside the colored elements. I also
+								made an inline style that calculates the ratio
+								between the two, based on the range of the
+								values I&apos;m expecting.
+							</p>
+							<p>
+								Now a user is no longer relying on just the
+								color to find out the higher and lower value.
+								Here demonstrated by inputting the values of 200
+								and 150:
 							</p>
 							<div className="bg-white text-black flex justify-center p-4 sm:p-8 my-8">
 								<UpdatedComparisonChart
@@ -399,8 +405,8 @@ const Page = () => {
 					<p>
 						Contrasting colors is one of the most common
 						accessibility blunders online. I suspect it&apos;s
-						because it&apos;s hard to get exact, as described by
-						this WCAG criterion:
+						because it&apos;s easy to overlook and hard to get
+						exact, as described by this WCAG criterion:
 					</p>
 					<Criteria
 						criteriaTitle={wcag143.criteriaTitle}
@@ -479,7 +485,7 @@ const Page = () => {
 									<div>&lt;/div &gt;</div>
 								</code>
 							</div>
-							<div className="bg-white text-black flex justify-center p-4 sm:p-8 my-8">
+							<div className="bg-black flex justify-center p-4 sm:p-8 my-8">
 								<div className=" border-black border-2 p-4 bg-slate-600 text-white">
 									Lorem ipsum dolor sit amet, consectetur
 									adipis.
@@ -495,7 +501,7 @@ const Page = () => {
 							<div className="bg-white text-black flex justify-center p-4 sm:p-8 my-8">
 								<Image
 									className="border-black border-2 max-w-full sm:max-w-sm"
-									src={boxImgae}
+									src={boxImage}
 									alt="A dark gray box with the words 'Lorem ipsum dolor sit amet, consectetur
 									adipis.' inside. The text is black and hard to make out against the background color. "
 								/>

@@ -8,6 +8,7 @@ const Criteria: React.FC<CriteriaType> = ({
 	text2,
 	text3,
 	text4,
+	text5,
 	wcag,
 	wcagLink,
 	en,
@@ -24,11 +25,12 @@ const Criteria: React.FC<CriteriaType> = ({
 						<li>{text2}</li>
 						{text3 && <li>{text3}</li>}
 						{text4 && <li>{text4}</li>}
+						{text5 && <li>{text5}</li>}
 					</ul>
 				)}
 				<nav className="mt-4">
 					<Link className="underline" href={wcagLink}>
-						WCAG 2.1 Success Criterion {wcag}
+						WCAG 2.2 Success Criterion {wcag}
 					</Link>{" "}
 					| EN {en} |{" "}
 					<Link href={webbLink}>

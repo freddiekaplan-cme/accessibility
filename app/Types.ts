@@ -6,6 +6,7 @@ export interface CriteriaType {
 	text2?: string | undefined
 	text3?: string | undefined
 	text4?: string | undefined
+	text5?: string | undefined
 	wcag: string
 	wcagLink: Url
 	en: string
