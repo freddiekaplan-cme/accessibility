@@ -1,4 +1,5 @@
 import React from "react"
+import Image from "next/image"
 import { criteria } from "../constants/Criterias"
 import PrincipleTitle from "../components/PrincipleTitle"
 import Criteria from "../components/Criteria"
@@ -6,6 +7,7 @@ import InfoBox from "../components/InfoBox"
 import { FocusOrder, AlteredFocusOrder } from "../components/FocusOrder"
 import Code from "../components/Code"
 import Link from "next/link"
+import phoneImg from "../../public/pexels-andrea-piacquadio-3791666.webp"
 
 const Page = () => {
 	const wcag211 = criteria.find((item) => item.wcag === "2.1.1")
@@ -75,6 +77,13 @@ const Page = () => {
 						webb={wcag255.webb}
 						webbLink={wcag255.webbLink}
 					/>
+
+					<Image
+						className="flex"
+						src={phoneImg}
+						alt="A younger woman is sitting on a bench in a park next to an older woman, she's holding a mobile phone."
+					/>
+
 					<div className="my-8 bg-slate-700 text-white">
 						<div className="p-4 sm:p-8">
 							<div className="mb-4 font-bold">

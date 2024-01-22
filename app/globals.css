@@ -5,18 +5,21 @@
 :root {
 	--font-rgb: 0, 0, 0;
 	--background-rgb: 224, 224, 226;
+	--header-underline: 0, 0, 0;
 }
 
 @media (prefers-color-scheme: dark) {
 	:root {
 		--font-rgb: 255, 255, 255;
 		--background-rgb: 0, 0, 0;
+		--header-underline: 255, 255, 255;
 	}
 }
 
 body {
 	background: rgb(var(--background-rgb));
 	color: rgb(var(--font-rgb));
+	/* border-color: rgb(var(--border-color)); */
 }
 
 p,
@@ -42,4 +45,16 @@ ul {
 
 option {
 	font-family: sans-serif;
+}
+
+.headerLink {
+	border-bottom: 4px solid rgb(var(--header-underline));
+	color: inherit;
+	text-decoration: none;
+	border-bottom-color: transparent;
+}
+
+.headerLink:hover,
+.headerLink:focus {
+	border-bottom-color: rgb(var(--header-underline));
 }
