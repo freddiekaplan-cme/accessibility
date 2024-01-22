@@ -18,7 +18,7 @@ const Criteria: React.FC<CriteriaType> = ({
 	return (
 		<>
 			<div className="my-8 bg-sky-800 p-4 sm:p-8 text-white">
-				<h3 className="font-bold text-lg">{criteriaTitle}</h3>
+				<h4 className="font-bold text-lg">{criteriaTitle}</h4>
 				<p>{text}</p>
 				{text2 && (
 					<ul className="ml-4">

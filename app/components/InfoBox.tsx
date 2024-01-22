@@ -18,22 +18,47 @@ const InfoBox = () => {
 
 	return (
 		<div className="flex flex-col">
-			<div className="flex flex-col sm:flex-row gap-4">
+			<div className="flex flex-col sm:flex-row sm:gap-4">
 				<button
 					onClick={handleClickDefault}
-					className="flex w-full justify-center items-center bg-orange-700 text-white rounded p-4 mb-4 hover:bg-orange-600"
+					className="flex w-full justify-center items-center rounded p-4 mb-4 bg-white text-black border-orange-700 border-4 hover:bg-orange-700 hover:text-white"
+					style={
+						showArea === "default"
+							? {
+									backgroundColor: "rgb(194, 65, 12)",
+									color: "white",
+								}
+							: {}
+					}
 				>
 					Default Size
 				</button>
+
 				<button
 					onClick={handleClickMinimum}
-					className="flex w-full justify-center items-center bg-orange-700 text-white rounded p-4 mb-4 hover:bg-orange-600"
+					className="flex w-full justify-center items-center rounded p-4 mb-4 bg-white text-black border-orange-700 border-4 hover:bg-orange-700 hover:text-white"
+					style={
+						showArea === "minimum"
+							? {
+									backgroundColor: "rgb(194, 65, 12)",
+									color: "white",
+								}
+							: {}
+					}
 				>
 					Minimum Size
 				</button>
 				<button
 					onClick={handleClickEnhanced}
-					className="flex w-full justify-center items-center bg-orange-700 text-white rounded p-4 mb-4 hover:bg-orange-600"
+					className="flex w-full justify-center items-center rounded p-4 mb-4 bg-white text-black border-orange-700 border-4 hover:bg-orange-700 hover:text-white"
+					style={
+						showArea === "enhanced"
+							? {
+									backgroundColor: "rgb(194, 65, 12)",
+									color: "white",
+								}
+							: {}
+					}
 				>
 					Enhanced Size
 				</button>
@@ -48,6 +73,7 @@ const InfoBox = () => {
 								? { width: "44px", height: "44px" }
 								: {}
 					}
+					aria-label="Looks like a close symbol, but doesn't do anything."
 				>
 					X
 				</div>

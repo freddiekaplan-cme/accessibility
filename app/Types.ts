@@ -20,6 +20,13 @@ export interface PrincipleTitleType {
 	quote: string
 }
 
+export interface CodeType {
+	text: string
+	indent: number
+	margin?: boolean
+	color?: string
+}
+
 export interface FormDataType {
 	name: string
 }
