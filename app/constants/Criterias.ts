@@ -8,7 +8,7 @@ export const criteria = [
 		webbLink:
 			"https://www.digg.se/webbriktlinjer/alla-webbriktlinjer/beskriv-med-text-allt-innehall-som-inte-ar-text",
 		text: "All non-text content that is presented to the user has a text alternative that serves the equivalent purpose [...].",
-		principle: "perceivable",
+		principle: "percievable",
 		level: "A",
 	},
 	{
@@ -20,7 +20,7 @@ export const criteria = [
 		webbLink:
 			"https://www.digg.se/webbriktlinjer/alla-webbriktlinjer/anvand-inte-enbart-farg-for-att-formedla-information",
 		text: "Color is not used as the only visual means of conveying information, indicating an action, prompting a response, or distinguishing a visual element.",
-		principle: "perceivable",
+		principle: "percievable",
 		level: "A",
 	},
 	{
@@ -35,7 +35,7 @@ export const criteria = [
 		text2: "Large Text. Large-scale text and images of large-scale text have a contrast ratio of at least 3:1.",
 		text3: "Incidental. Text or images of text that are part of an inactive user interface component, that are pure decoration, that are not visible to anyone, or that are part of a picture that contains significant other visual content, have no contrast requirement.",
 		text4: "Logotypes. Text that is part of a logo or brand name has no contrast requirement.",
-		principle: "perceivable",
+		principle: "percievable",
 		level: "AA",
 	},
 	{
@@ -49,7 +49,7 @@ export const criteria = [
 		text: "The visual presentation of the following have a contrast ratio of at least 3:1 against adjacent color(s):",
 		text2: "User Interface Components. Visual information required to identify user interface components and states, except for inactive components or where the appearance of the component is determined by the user agent and not modified by the author;",
 		text3: "Graphical Objects. Parts of graphics required to understand the content, except when a particular presentation of graphics is essential to the information being conveyed.",
-		principle: "perceivable",
+		principle: "percievable",
 		level: "AA",
 	},
 	{
@@ -61,7 +61,7 @@ export const criteria = [
 		webbLink:
 			"https://www.digg.se/webbriktlinjer/alla-webbriktlinjer/all-funktionalitet-ska-kunna-anvandas-med-tangentbord",
 		text: "All functionality of the content is operable through a keyboard interface without requiring specific timings for individual keystrokes, except where the underlying function requires input that depends on the path of the user's movement and not just the endpoints.",
-		principle: "Operable",
+		principle: "operable",
 		level: "A",
 	},
 	{
@@ -73,7 +73,7 @@ export const criteria = [
 		webbLink:
 			"https://www.digg.se/webbriktlinjer/alla-webbriktlinjer/ha-en-meningsfull-fokusordning",
 		text: "If a Web page can be navigated sequentially and the navigation sequences affect meaning or operation, focusable components receive focus in an order that preserves meaning and operability.",
-		principle: "Operable",
+		principle: "operable",
 		level: "A",
 	},
 	{
@@ -89,7 +89,7 @@ export const criteria = [
 		text3: "Inline. The target is in a sentence or block of text;",
 		text4: "User Agent Control. The size of the target is determined by the user agent and is not modified by the author;",
 		text5: "Essential. A particular presentation of the target is essential to the information being conveyed.",
-		principle: "Operable",
+		principle: "operable",
 		level: "AAA",
 	},
 	{
@@ -105,7 +105,7 @@ export const criteria = [
 		text3: "Inline. The target is in a sentence or its size is otherwise constrained by the line-height of non-target text;",
 		text4: "User Agent Control. The size of the target is determined by the user agent and is not modified by the author;",
 		text5: "Essential. A particular presentation of the target is essential or is legally required for the information being conveyed.",
-		principle: "Operable",
+		principle: "operable",
 		level: "AA",
 	},
 	{
@@ -117,7 +117,7 @@ export const criteria = [
 		webbLink:
 			"https://www.digg.se/webbriktlinjer/alla-webbriktlinjer/skapa-tydliga-faltetiketter-ledtexter",
 		text: "Labels or instructions are provided when content requires user input.",
-		principle: "Understandable",
+		principle: "understandable",
 		level: "A",
 	},
 	{
@@ -129,7 +129,7 @@ export const criteria = [
 		webbLink:
 			"https://www.digg.se/webbriktlinjer/alla-webbriktlinjer/ge-forslag-pa-hur-fel-kan-rattas-till",
 		text: "If an input error is automatically detected and suggestions for correction are known, then the suggestions are provided to the user, unless it would jeopardize the security or purpose of the content.",
-		principle: "Understandable",
+		principle: "understandable",
 		level: "AA",
 	},
 	{

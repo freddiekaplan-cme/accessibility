@@ -55,7 +55,7 @@ const Page = () => {
 
 	return (
 		<div className="flex flex-col items-center">
-			<div className="flex flex-col max-w-3xl w-full p-4 sm:m-8">
+			<div className="flex flex-col max-w-3xl w-full p-4 sm:p-8 sm:m-8">
 				<PrincipleTitle
 					title="Robust"
 					quote="Content must be robust enough that it can be interpreted
@@ -101,12 +101,11 @@ const Page = () => {
 					src={img}
 					alt="A woman working at a decorated office desk with three screens. The screens have  code on them."
 				/>
-				<Link
-					href="https://www.pexels.com/photo/woman-coding-on-computer-3861958"
-					className="mb-8 text-right text-sm underline"
-				>
-					Photo by ThisIsEngineering
-				</Link>
+				<div className="mb-8 text-right text-sm underline">
+					<Link href="https://www.pexels.com/photo/woman-coding-on-computer-3861958">
+						Photo by ThisIsEngineering
+					</Link>
+				</div>
 
 				<article>
 					<h3 className="text-center text-xl font-bold mb-8">

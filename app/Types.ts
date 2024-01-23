@@ -13,11 +13,12 @@ export interface CriteriaType {
 	webb: string
 	webbLink: Url
 	level?: string
+	principle?: string
 }
 
 export interface PrincipleTitleType {
 	title: string
-	quote: string
+	quote?: string
 }
 
 export interface CodeType {

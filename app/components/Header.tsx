@@ -24,24 +24,27 @@ const Header = () => {
 	}, [])
 
 	return (
-		<header>
-			<div className="flex flex-row sm:flex-col p-4 sm:p-8 justify-between">
-				<h1 className="flex flex-row font-bold text-3xl">
-					Accessibility Project
+		<header className="p-4 sm:p-8">
+			<div className="flex flex-row sm:flex-col justify-between">
+				<h1 className="flex flex-row font-bold text-3xl items-center">
+					<Link href={"/"}>Accessibility Project</Link>
 				</h1>
 				<button
-					className="flex sm:hidden flex-col gap-1 justify-center"
+					className="flex sm:hidden flex-col gap-1 items-end h-12 w-12 justify-center"
 					onClick={handleClick}
+					aria-label="Navigation menu"
 				>
-					<div className="h-1 w-8 bg-white"></div>
-					<div className="h-1 w-8 bg-white"></div>
-					<div className="h-1 w-8 bg-white"></div>
+					<div className="headerMenuBar"></div>
+					<div className="headerMenuBar"></div>
+					<div className="headerMenuBar"></div>
 				</button>
 			</div>
 			<nav
 				className={`${
 					showMenu ? "flex" : "hidden"
-				} sm:flex flex-col sm:flex-row gap-4 pt-2`}
+				} sm:flex flex-col sm:flex-row gap-4 pt-4 sm:pt-2 pl-4 sm:pl-0`}
+				// 	showMenu ? "opacity-100 max-h-full" : "opacity-0 max-h-0"
+				// } flex flex-col sm:flex-row gap-4 pt-4 sm:pt-2 pl-4 sm:pl-0 transition ease-in-out duration-300`}
 			>
 				<Link onClick={handleClick} href="/" className="headerLink">
 					Home
@@ -73,6 +76,13 @@ const Header = () => {
 					href="/robust"
 				>
 					Robust
+				</Link>
+				<Link
+					onClick={handleClick}
+					className="headerLink"
+					href="/criteria"
+				>
+					WCAG Criteria
 				</Link>
 			</nav>
 		</header>

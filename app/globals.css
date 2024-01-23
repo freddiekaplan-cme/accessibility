@@ -19,7 +19,6 @@
 body {
 	background: rgb(var(--background-rgb));
 	color: rgb(var(--font-rgb));
-	/* border-color: rgb(var(--border-color)); */
 }
 
 p,
@@ -58,4 +57,10 @@ option {
 .headerLink:hover,
 .headerLink:focus {
 	border-bottom-color: rgb(var(--header-underline));
+}
+
+.headerMenuBar {
+	height: 4px;
+	width: 28px;
+	background-color: rgb(var(--header-underline));
 }

@@ -8,6 +8,7 @@ import { FocusOrder, AlteredFocusOrder } from "../components/FocusOrder"
 import Code from "../components/Code"
 import Link from "next/link"
 import phoneImg from "../../public/pexels-andrea-piacquadio-3791666.webp"
+import frustratingImg from "../../public/pexels-andrea-piacquadio-3807738.webp"
 
 const Page = () => {
 	const wcag211 = criteria.find((item) => item.wcag === "2.1.1")
@@ -33,7 +34,7 @@ const Page = () => {
 
 	return (
 		<div className="flex flex-col items-center">
-			<div className="flex flex-col max-w-3xl w-full p-4 sm:m-8">
+			<div className="flex flex-col max-w-3xl w-full p-4 sm:p-8 sm:m-8">
 				<PrincipleTitle
 					title="Operable"
 					quote="User interface components and navigation must be operable."
@@ -83,6 +84,11 @@ const Page = () => {
 						src={phoneImg}
 						alt="A younger woman is sitting on a bench in a park next to an older woman, she's holding a mobile phone."
 					/>
+					<div className="mb-8 text-right text-sm underline">
+						<Link href="https://www.pexels.com/photo/daughter-explaining-elderly-mother-how-using-smartphone-3791666/">
+							Photo by Andrea Piacquadio
+						</Link>
+					</div>
 
 					<div className="my-8 bg-slate-700 text-white">
 						<div className="p-4 sm:p-8">
@@ -559,6 +565,18 @@ const Page = () => {
 							</p>
 						</div>
 					</div>
+
+					<Image
+						className="flex"
+						src={frustratingImg}
+						alt="A woman is visibly frustrated in front of her computer."
+					/>
+					<div className="mb-8 text-right text-sm underline">
+						<Link href="https://www.pexels.com/photo/woman-in-white-shirt-showing-frustration-3807738/">
+							Photo by Andrea Piacquadio
+						</Link>
+					</div>
+
 					<p>
 						Finally, let&apos;s take a look at how you can change
 						the focus order if necessary.

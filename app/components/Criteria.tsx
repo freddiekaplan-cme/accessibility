@@ -14,11 +14,27 @@ const Criteria: React.FC<CriteriaType> = ({
 	en,
 	webb,
 	webbLink,
+	level,
+	principle,
 }) => {
 	return (
 		<>
 			<div className="my-8 bg-sky-800 p-4 sm:p-8 text-white">
 				<h4 className="font-bold text-lg">{criteriaTitle}</h4>
+				{level && principle && (
+					<div className="flex flex-row gap-4">
+						<div>
+							<Link href={`/${principle}`}>
+								Principle:{" "}
+								<span className="underline">
+									{principle.charAt(0).toUpperCase() +
+										principle.slice(1)}
+								</span>
+							</Link>
+						</div>
+						<div>Level: {level}</div>
+					</div>
+				)}
 				<p>{text}</p>
 				{text2 && (
 					<ul className="ml-4">
