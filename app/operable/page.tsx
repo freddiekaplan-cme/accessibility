@@ -60,6 +60,9 @@ const Page = () => {
 						having access to a computer mouse, or having enough time
 						to read and use the content.
 					</p>
+					<h3 className="text-center text-xl font-bold my-8">
+						Clickable Area
+					</h3>
 					<p>
 						Users also need enough space on screen when clicking on
 						things. There are two WCAG criteria for this, a minimum
@@ -97,8 +100,11 @@ const Page = () => {
 						src={phoneImg}
 						alt="A younger woman is showing a mobile phone to an older woman."
 					/>
-					<div className="mb-8 text-right text-sm underline">
-						<Link href="https://www.pexels.com/photo/daughter-explaining-elderly-mother-how-using-smartphone-3791666/">
+					<div className="mb-8 text-right text-sm">
+						<Link
+							className="underline"
+							href="https://www.pexels.com/photo/daughter-explaining-elderly-mother-how-using-smartphone-3791666/"
+						>
 							Photo by Andrea Piacquadio
 						</Link>
 					</div>
@@ -268,12 +274,17 @@ const Page = () => {
 						src={frustratingImg}
 						alt="A woman is visibly frustrated in front of her computer."
 					/>
-					<div className="mb-8 text-right text-sm underline">
-						<Link href="https://www.pexels.com/photo/woman-in-white-shirt-showing-frustration-3807738/">
+					<div className="mb-8 text-right text-sm">
+						<Link
+							className="underline"
+							href="https://www.pexels.com/photo/woman-in-white-shirt-showing-frustration-3807738/"
+						>
 							Photo by Andrea Piacquadio
 						</Link>
 					</div>
-
+					<h3 className="text-center text-xl font-bold my-8">
+						Changing the Focus Order
+					</h3>
 					<p>
 						Finally, let&apos;s take a look at how you can change
 						the focus order if necessary.
