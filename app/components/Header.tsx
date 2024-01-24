@@ -43,12 +43,7 @@ const Header = () => {
 				className={`${
 					showMenu ? "flex" : "hidden"
 				} sm:flex flex-col sm:flex-row gap-4 pt-4 sm:pt-2 pl-4 sm:pl-0`}
-				// 	showMenu ? "opacity-100 max-h-full" : "opacity-0 max-h-0"
-				// } flex flex-col sm:flex-row gap-4 pt-4 sm:pt-2 pl-4 sm:pl-0 transition ease-in-out duration-300`}
 			>
-				<Link onClick={handleClick} href="/" className="underLineLink">
-					Home
-				</Link>
 				<Link
 					onClick={handleClick}
 					href="/percievable"
