@@ -10,6 +10,11 @@ import {
 	UpdatedComparisonChart,
 } from "../components/ComparisonChart"
 import Link from "next/link"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+	title: "Percievable | Accessibility Project",
+}
 
 const Page = () => {
 	const wcag111 = criteria.find((item) => item.wcag === "1.1.1")
@@ -68,9 +73,9 @@ const Page = () => {
 
 					<div className="my-8 bg-slate-700 text-white">
 						<div className="p-4 sm:p-8">
-							<div className="mb-4 font-bold">
-								Example: Adding alt text
-							</div>
+							<h4 className="mb-4 font-bold">
+								Example: Adding Alt Text
+							</h4>
 							<p>
 								I wan&apos;t to add an image to my React site:
 							</p>
@@ -113,10 +118,10 @@ const Page = () => {
 						</div>
 					</div>
 					<p>
-						But if you&apos;re a developer, you most likely already
-						knew about this. Let&apos;s have a look at our main
-						topic which many web developers — and web designers —
-						usually are more oblivous to: color and contrast.
+						If you&apos;re a developer, you most likely already knew
+						about this. Let&apos;s have a look at our main topic
+						which many web developers — and web designers — usually
+						are more oblivous to: color and contrast.
 					</p>
 				</section>
 
@@ -141,9 +146,9 @@ const Page = () => {
 
 					<div className="my-8 bg-slate-700 text-white">
 						<div className="p-4 sm:p-8">
-							<div className="mb-4 font-bold">
+							<h4 className="mb-4 font-bold">
 								Example: Comparison Chart
-							</div>
+							</h4>
 							<p>
 								I&apos;ve made a component that takes two values
 								and returns a chart consisting of two elements
@@ -449,9 +454,9 @@ const Page = () => {
 					</p>
 					<div className="my-8 bg-slate-700 text-white">
 						<div className="p-4 sm:p-8">
-							<div className="mb-4 font-bold">
+							<h4 className="mb-4 font-bold">
 								Example: Dark Mode
-							</div>
+							</h4>
 							<p>
 								I&apos;m using dark mode on my site. In light
 								mode the text is black and the background is

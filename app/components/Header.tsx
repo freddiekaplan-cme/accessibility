@@ -46,40 +46,40 @@ const Header = () => {
 				// 	showMenu ? "opacity-100 max-h-full" : "opacity-0 max-h-0"
 				// } flex flex-col sm:flex-row gap-4 pt-4 sm:pt-2 pl-4 sm:pl-0 transition ease-in-out duration-300`}
 			>
-				<Link onClick={handleClick} href="/" className="headerLink">
+				<Link onClick={handleClick} href="/" className="underLineLink">
 					Home
 				</Link>
 				<Link
 					onClick={handleClick}
 					href="/percievable"
-					className="headerLink"
+					className="underLineLink"
 				>
 					Percievable
 				</Link>
 				<Link
 					onClick={handleClick}
-					className="headerLink"
+					className="underLineLink"
 					href="/operable"
 				>
 					Operable
 				</Link>
 				<Link
 					onClick={handleClick}
-					className="headerLink"
+					className="underLineLink"
 					href="/understandable"
 				>
 					Understandable
 				</Link>
 				<Link
 					onClick={handleClick}
-					className="headerLink"
+					className="underLineLink"
 					href="/robust"
 				>
 					Robust
 				</Link>
 				<Link
 					onClick={handleClick}
-					className="headerLink"
+					className="underLineLink"
 					href="/criteria"
 				>
 					WCAG Criteria

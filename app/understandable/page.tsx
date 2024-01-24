@@ -2,6 +2,11 @@ import React from "react"
 import { criteria } from "../constants/Criterias"
 import PrincipleTitle from "../components/PrincipleTitle"
 import Criteria from "../components/Criteria"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+	title: "Understandable | Accessibility Project",
+}
 
 const Page = () => {
 	const wcag332 = criteria.find((item) => item.wcag === "3.3.2")

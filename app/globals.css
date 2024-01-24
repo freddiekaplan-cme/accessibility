@@ -46,7 +46,7 @@ option {
 	font-family: sans-serif;
 }
 
-.headerLink {
+.underLineLink {
 	border-bottom: 4px solid rgb(var(--header-underline));
 	border-bottom-color: transparent;
 	color: inherit;
@@ -54,8 +54,8 @@ option {
 	width: fit-content;
 }
 
-.headerLink:hover,
-.headerLink:focus {
+.underLineLink:hover,
+.underLineLink:focus {
 	border-bottom-color: rgb(var(--header-underline));
 }
 

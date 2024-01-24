@@ -1,56 +1,23 @@
-"use client"
-import React, { ChangeEvent, useState } from "react"
+import React from "react"
 import PrincipleTitle from "../components/PrincipleTitle"
 import Criteria from "../components/Criteria"
 import { criteria } from "../constants/Criterias"
-import { FormDataType } from "../Types"
 import Link from "next/link"
 import Image from "next/image"
 import img from "../../public/pexels-thisisengineering-3861958.webp"
+import RegularForm from "../components/RegularForm"
+import PlaceholderForm from "../components/PlaceholderForm"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+	title: "Robust | Accessibility Project",
+}
 
 const Page = () => {
 	const wcag412 = criteria.find((item) => item.wcag === "4.1.2")
-	const [formData, setFormData] = useState<FormDataType>({ name: "" })
-	const [secondFormData, setSecondFormData] = useState<FormDataType>({
-		name: "",
-	})
-	const [formMessage, setFormMessage] = useState<string>("")
-	const [secondFormMessage, setSecondFormMessage] = useState<string>("")
 
 	if (!wcag412) {
 		return <div>Error loading information about WCAG 4.1.2.</div>
-	}
-
-	const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-		const { name, value } = e.target
-		setFormData(
-			(prevState) =>
-				({
-					...prevState,
-					[name]: value,
-				}) as FormDataType,
-		)
-	}
-
-	const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-		e.preventDefault()
-		setFormMessage("Name sent!")
-	}
-
-	const secondHandleChange = (e: ChangeEvent<HTMLInputElement>) => {
-		const { name, value } = e.target
-		setSecondFormData(
-			(prevState) =>
-				({
-					...prevState,
-					[name]: value,
-				}) as FormDataType,
-		)
-	}
-
-	const secondHandleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-		e.preventDefault()
-		setSecondFormMessage("Name sent!")
 	}
 
 	return (
@@ -59,8 +26,7 @@ const Page = () => {
 				<PrincipleTitle
 					title="Robust"
 					quote="Content must be robust enough that it can be interpreted
-						by a wide variety of user agents, including assistive
-						technologies."
+						by a wide variety of user agents, including assistive technologies."
 				/>
 				<section>
 					<p>
@@ -71,9 +37,9 @@ const Page = () => {
 					</p>
 					<div className="my-8 bg-slate-700 text-white">
 						<div className="p-4 sm:p-8">
-							<div className="mb-4 font-bold">
+							<h4 className="mb-4 font-bold">
 								Example: Semantic HTML
-							</div>
+							</h4>
 							<p>
 								Using{" "}
 								<code className="bg-slate-800 text-white">
@@ -133,9 +99,9 @@ const Page = () => {
 					</p>
 					<div className="my-8 bg-slate-700 text-white">
 						<div className="p-4 sm:p-8">
-							<div className="mb-4 font-bold">
+							<h4 className="mb-4 font-bold">
 								Example: My Cool Form
-							</div>
+							</h4>
 							<p>
 								I want to add a small form on my site where a
 								user can send in their name for a competition.
@@ -194,35 +160,7 @@ const Page = () => {
 							</div>
 							<p>Which looks something like this:</p>
 							<div className="bg-white text-black flex justify-center p-4 sm:p-8 my-8">
-								<form onSubmit={handleSubmit}>
-									<div>
-										<div className="font-bold mb-4">
-											Name Form
-										</div>
-										<label className="mr-4" htmlFor="name">
-											Name:
-										</label>
-										<input
-											className="p-2 border-black border-solid border-2"
-											type="text"
-											id="name"
-											name="name"
-											value={formData.name}
-											onChange={handleChange}
-											required
-										/>
-									</div>
-									<div>
-										<button
-											className="text-white p-2 my-8 rounded bg-green-700"
-											type="submit"
-										>
-											Submit
-										</button>
-									</div>
-
-									{formMessage}
-								</form>
+								<RegularForm />
 							</div>
 							<p>
 								However, for this small form I want something
@@ -290,35 +228,7 @@ const Page = () => {
 							</p>
 
 							<div className="bg-white text-black flex justify-center p-4 sm:p-8 my-8">
-								<form onSubmit={secondHandleSubmit}>
-									<div id="nameform" className="font-bold">
-										Name Form
-									</div>
-									<div className="flex items-center gap-4">
-										<div>
-											<input
-												className="p-2 border-black border-solid border-2"
-												type="text"
-												placeholder="Name"
-												id="name"
-												name="name"
-												value={secondFormData.name}
-												onChange={secondHandleChange}
-												aria-labelledby="nameform"
-												required
-											/>
-										</div>
-										<div>
-											<button
-												className="text-white p-2 my-8 mr-2 rounded bg-green-700"
-												type="submit"
-											>
-												Submit
-											</button>
-										</div>
-									</div>
-									{secondFormMessage}
-								</form>
+								<PlaceholderForm />
 							</div>
 
 							<p>
@@ -473,7 +383,7 @@ const Page = () => {
 								<code className="bg-slate-800 text-white">
 									&lt;input&gt;
 								</code>{" "}
-								element. Another solution would&dapos;ve been to
+								element. Another solution would&apos;ve been to
 								rework the{" "}
 								<code className="bg-slate-800 text-white">
 									&lt;label&gt;

@@ -8,21 +8,18 @@ export default function Home() {
 	return (
 		<div className="flex flex-col items-center">
 			<div className="flex flex-col max-w-3xl w-full p-4 sm:p-8 sm:m-8">
-				<PrincipleTitle title="Exploring common accessibility issues&nbsp;on&nbsp;the&nbsp;web" />
+				<PrincipleTitle title="Exploring Common Accessibility Issues&nbsp;on&nbsp;the&nbsp;Web" />
 
 				<main>
 					<p>
-						Accessibility on the web is a big topic. As a general
-						rule, a site with a good structure and semantic HTML
-						will fulfill most of the necessary requirements.
-						Howvever, there are still many accessibility issues on
-						the web.
+						Accessibility on the web is a big topic. A site with a
+						good structure and semantic HTML will fulfill most of
+						the necessary requirements, but not all.
 					</p>
 					<p>
-						The information about the accessibility requirements can
-						be overwhelming and hard to navigate. The Accessibity
-						Project aims to highlight the most common issues in a
-						clear way, with code snippets and examples.
+						The Accessibity Project aims to highlight the most
+						common accessibility issues in a clear way, with code
+						snippets and examples.
 					</p>
 
 					<Image
@@ -74,6 +71,7 @@ export default function Home() {
 						className="mt-8 mb-4"
 						src={judgeImg}
 						alt="Asian judge working on laptop in office."
+						loading="lazy"
 					/>
 					<div className="mb-8 text-right text-sm underline">
 						<Link href="https://www.pexels.com/photo/crop-asian-judge-working-on-laptop-in-office-5668772/">
@@ -82,7 +80,7 @@ export default function Home() {
 					</div>
 
 					<h3 className="font-bold text-lg mt-8">
-						Laws and regulations, the EU and Sweden
+						Laws and Regulations, the EU and Sweden
 					</h3>
 					<p>
 						Since the WCAG are the global standard, they are the
@@ -99,7 +97,7 @@ export default function Home() {
 					</p>
 					<p>
 						The Accessibility Project is based in Sweden, which also
-						has it&apos;s is own guidelines, collected on the site{" "}
+						has it&apos;s own guidelines, collected on the site{" "}
 						<Link
 							className="underline"
 							href="https://www.digg.se/webbriktlinjer"
@@ -141,9 +139,32 @@ export default function Home() {
 						website or mobile application should be accessible.
 					</p>
 					<p>
-						Only public entities are bound to fulfill the guidelines
-						in this version, but an updated law - planned to be in
-						place in 2025 - will also include many public companies.
+						Only public entities are bound by law to fulfill the
+						guidelines, but there is a new law planned to be in
+						place in 2025 that will provide guidelines for public
+						companies.
+					</p>
+					<h3 className="font-bold text-lg mt-8">
+						About The Accessibility Project
+					</h3>
+					<p>
+						This site is a part of a thesis for the Frontend/App
+						Developer 2022 program at{" "}
+						<Link
+							className="underline"
+							href="https://cmeducations.se/utbildningar/program/frontend-app-developer"
+						>
+							Changemaker Educations
+						</Link>
+						. It&apos;s made by{" "}
+						<Link
+							className="underline"
+							href="https://github.com/freddiekaplan-cme"
+						>
+							Freddie Kaplan
+						</Link>{" "}
+						as an exploration regarding accessibility on the web
+						from a frontend developer perspective.
 					</p>
 				</main>
 			</div>

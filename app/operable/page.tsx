@@ -9,6 +9,11 @@ import Code from "../components/Code"
 import Link from "next/link"
 import phoneImg from "../../public/pexels-andrea-piacquadio-3791666.webp"
 import frustratingImg from "../../public/pexels-andrea-piacquadio-3807738.webp"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+	title: "Operable | Accessibility Project",
+}
 
 const Page = () => {
 	const wcag211 = criteria.find((item) => item.wcag === "2.1.1")
@@ -92,9 +97,9 @@ const Page = () => {
 
 					<div className="my-8 bg-slate-700 text-white">
 						<div className="p-4 sm:p-8">
-							<div className="mb-4 font-bold">
-								Example: Clickable area
-							</div>
+							<h4 className="mb-4 font-bold">
+								Example: Clickable Area
+							</h4>
 							<p>
 								I have an info box component on my React site
 								that can be closed by clicking the cross in the
@@ -226,7 +231,7 @@ const Page = () => {
 
 				<article>
 					<h3 className="text-center text-xl font-bold my-8">
-						Using a keyboard and focus order
+						Using a Keyboard and Focus Order
 					</h3>
 					<p>
 						There is a WCAG criterion stating that users should be
@@ -261,9 +266,9 @@ const Page = () => {
 					/>
 					<div className="my-8 bg-slate-700 text-white">
 						<div className="p-4 sm:p-8">
-							<div className="mb-4 font-bold">
-								Example: Test the focus order on my site
-							</div>
+							<h4 className="mb-4 font-bold">
+								Example: Test the Focus Order on My Site
+							</h4>
 							<p>
 								Here&apos;s an example site you can use to test
 								the focus order by tabbing through all elements
@@ -438,9 +443,9 @@ const Page = () => {
 
 					<div className="my-8 bg-slate-700 text-white">
 						<div className="p-4 sm:p-8">
-							<div className="mb-4 font-bold">
-								Example: Unpredictable focus order
-							</div>
+							<h4 className="mb-4 font-bold">
+								Example: Unpredictable Focus Order
+							</h4>
 							<div className="bg-slate-800 text-white my-8">
 								<code>
 									<Code text="<main>" indent={0} />
@@ -583,9 +588,9 @@ const Page = () => {
 					</p>
 					<div className="my-8 bg-slate-700 text-white">
 						<div className="p-4 sm:p-8">
-							<div className="mb-4 font-bold">
-								Example: Changing the focus order
-							</div>
+							<h4 className="mb-4 font-bold">
+								Example: Changing the Focus Order
+							</h4>
 
 							<p>
 								There are a couple of methods to alter the focus

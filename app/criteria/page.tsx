@@ -5,6 +5,11 @@ import Link from "next/link"
 import PrincipleTitle from "../components/PrincipleTitle"
 import { criteria } from "../constants/Criterias"
 import Criteria from "../components/Criteria"
+import { Metadata } from "next"
+
+export const metadata: Metadata = {
+	title: "WCAG Criteria | Accessibility Project",
+}
 
 const Page = () => {
 	return (
