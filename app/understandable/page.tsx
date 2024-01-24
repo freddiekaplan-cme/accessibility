@@ -3,6 +3,7 @@ import { criteria } from "../constants/Criterias"
 import PrincipleTitle from "../components/PrincipleTitle"
 import Criteria from "../components/Criteria"
 import { Metadata } from "next"
+import LabelledForm from "../components/LabelledForm"
 
 export const metadata: Metadata = {
 	title: "Understandable | Accessibility Project",
@@ -44,6 +45,18 @@ const Page = () => {
 						webb={wcag332.webb}
 						webbLink={wcag332.webbLink}
 					/>
+
+					<div className="my-8 bg-slate-700 text-white">
+						<div className="p-4 sm:p-8">
+							<h4 className="mb-4 font-bold">
+								Example: Labelled Form
+							</h4>
+							<p>Paragraf</p>
+							<div className="bg-white text-black flex justify-center p-4 sm:p-8 my-8">
+								<LabelledForm />
+							</div>
+						</div>
+					</div>
 				</article>
 				<article>
 					<h3 className="text-center text-xl font-bold my-8">

@@ -32,6 +32,11 @@ export interface FormDataType {
 	name: string
 }
 
+export interface LabelledFormDataType {
+	givenName: string
+	familyName: string
+}
+
 export interface AgeFormDataType {
 	age: number | null
 }

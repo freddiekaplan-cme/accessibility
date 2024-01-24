@@ -8,6 +8,11 @@ import img from "../../public/pexels-thisisengineering-3861958.webp"
 import RegularForm from "../components/RegularForm"
 import PlaceholderForm from "../components/PlaceholderForm"
 import { Metadata } from "next"
+import {
+	FormLabelledBy,
+	FormWithPlaceholder,
+	MyForm,
+} from "../components/RobustSnippets"
 
 export const metadata: Metadata = {
 	title: "Robust | Accessibility Project",
@@ -108,56 +113,9 @@ const Page = () => {
 								Usually a form in React is structured something
 								like this:
 							</p>
-							<div className="bg-slate-800 text-white my-8">
-								<code>
-									<div>&lt;div&gt;Name Form&lt;/div&gt;</div>
-									<div>
-										&lt;form
-										onSubmit=&#123;handleSubmit&#125;
-									</div>
-									<div className="ml-4 sm:ml-8">
-										&lt;div&gt;
-									</div>
-									<div className="ml-8 sm:ml-16">
-										&lt;label
-										htmlFor=&quot;name&quot;&gt;Name:&lt;/label&gt;
-									</div>
-									<div className="ml-8 sm:ml-16">
-										&lt;input
-									</div>
-									<div className="ml-12 sm:ml-24">
-										type=&quot;text&quot;
-									</div>
-									<div className="ml-12 sm:ml-24">
-										id=&quot;name&quot;
-										name=&quot;name&quot;
-									</div>
-									<div className="ml-12 sm:ml-24">
-										value=&#123;formData.name&#125;
-									</div>
-									<div className="ml-12 sm:ml-24">
-										onChange=&#123;handleChange&#125;
-									</div>
-									<div className="ml-12 sm:ml-24">
-										required
-									</div>
-									<div className="ml-8 sm:ml-16">/&gt;</div>
-									<div className="ml-4 sm:ml-8">
-										&lt;/div&gt;
-									</div>
-									<div className="ml-4 sm:ml-8">
-										&lt;div&gt;
-									</div>
-									<div className="ml-8 sm:ml-16">
-										&lt;button
-										type=&quot;submit&quot;&gt;Submit&lt;/button&gt;
-									</div>
-									<div className="ml-4 sm:ml-8">
-										&lt;/div&gt;
-									</div>
-									<div>&lt;/form&gt;</div>
-								</code>
-							</div>
+
+							<MyForm />
+
 							<p>Which looks something like this:</p>
 							<div className="bg-white text-black flex justify-center p-4 sm:p-8 my-8">
 								<RegularForm />
@@ -167,61 +125,9 @@ const Page = () => {
 								tighter and just use a placeholder instead of
 								the label:
 							</p>
-							<div className="bg-slate-800 text-white my-8">
-								<code>
-									<div>
-										<div>
-											&lt;div&gt;Name Form&lt;/div&gt;
-										</div>
-										&lt;form
-										onSubmit=&#123;handleSubmit&#125;
-									</div>
-									<div className="ml-4 sm:ml-8">
-										&lt;div&gt;
-									</div>
 
-									<div className="ml-8 sm:ml-16">
-										&lt;input
-									</div>
-									<div className="ml-12 sm:ml-24">
-										type=&quot;text&quot;
-									</div>
-									<div
-										aria-label="Highlighted code"
-										className="ml-12 sm:ml-24 text-green-400"
-									>
-										placeholder=&quot;Name&quot;
-									</div>
-									<div className="ml-12 sm:ml-24">
-										id=&quot;name&quot;
-										name=&quot;name&quot;
-									</div>
-									<div className="ml-12 sm:ml-24">
-										value=&#123;formData.name&#125;
-									</div>
-									<div className="ml-12 sm:ml-24">
-										onChange=&#123;handleChange&#125;
-									</div>
-									<div className="ml-12 sm:ml-24">
-										required
-									</div>
-									<div className="ml-8 sm:ml-16">/&gt;</div>
-									<div className="ml-4 sm:ml-8">
-										&lt;/div&gt;
-									</div>
-									<div className="ml-4 sm:ml-8">
-										&lt;div&gt;
-									</div>
-									<div className="ml-8 sm:ml-16">
-										&lt;button
-										type=&quot;submit&quot;&gt;Submit&lt;/button&gt;
-									</div>
-									<div className="ml-4 sm:ml-8">
-										&lt;/div&gt;
-									</div>
-									<div>&lt;/form&gt;</div>
-								</code>
-							</div>
+							<FormWithPlaceholder />
+
 							<p>
 								This is my reworked form, note that there is no
 								label next to the input.
@@ -274,71 +180,8 @@ const Page = () => {
 								to the text.{" "}
 							</p>
 
-							<div className="bg-slate-800 text-white my-8">
-								<code>
-									<div>
-										<div>
-											&lt;div{" "}
-											<span
-												aria-label="Highlighted code"
-												className="text-green-400"
-											>
-												id=&quot;nameform&quot;
-											</span>
-											&gt;Name Form&lt;/div&gt;
-										</div>
-										&lt;form
-										onSubmit=&#123;handleSubmit&#125;
-									</div>
-									<div className="ml-4 sm:ml-8">
-										&lt;div&gt;
-									</div>
+							<FormLabelledBy />
 
-									<div className="ml-8 sm:ml-16">
-										&lt;input
-									</div>
-									<div className="ml-12 sm:ml-24">
-										type=&quot;text&quot;
-									</div>
-									<div className="ml-12 sm:ml-24">
-										placeholder=&quot;Name&quot;
-									</div>
-									<div className="ml-12 sm:ml-24">
-										id=&quot;name&quot;
-										name=&quot;name&quot;
-									</div>
-									<div className="ml-12 sm:ml-24">
-										value=&#123;formData.name&#125;
-									</div>
-									<div className="ml-12 sm:ml-24">
-										onChange=&#123;handleChange&#125;
-									</div>
-									<div
-										aria-label="Highlighted code"
-										className="ml-12 sm:ml-24 text-green-400"
-									>
-										aria-labelledby=&quot;nameform&quot;
-									</div>
-									<div className="ml-12 sm:ml-24">
-										required
-									</div>
-									<div className="ml-8 sm:ml-16">/&gt;</div>
-									<div className="ml-4 sm:ml-8">
-										&lt;/div&gt;
-									</div>
-									<div className="ml-4 sm:ml-8">
-										&lt;div&gt;
-									</div>
-									<div className="ml-8 sm:ml-16">
-										&lt;button
-										type=&quot;submit&quot;&gt;Submit&lt;/button&gt;
-									</div>
-									<div className="ml-4 sm:ml-8">
-										&lt;/div&gt;
-									</div>
-									<div>&lt;/form&gt;</div>
-								</code>
-							</div>
 							<p>
 								This works and fulfills the WCAG criterion, but
 								is &quot;Name Form&quot; as clear and
