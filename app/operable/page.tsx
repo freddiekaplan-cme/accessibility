@@ -4,7 +4,8 @@ import { criteria } from "../constants/Criterias"
 import PrincipleTitle from "../components/PrincipleTitle"
 import Criteria from "../components/Criteria"
 import InfoBox from "../components/InfoBox"
-import { FocusOrder, AlteredFocusOrder } from "../components/FocusOrder"
+import FocusOrder from "../components/FocusOrder"
+import FocusOrderAltered from "../components/FocusOrderAltered"
 import Code from "../components/Code"
 import Link from "next/link"
 import phoneImg from "../../public/pexels-andrea-piacquadio-3791666.webp"
@@ -361,7 +362,7 @@ const Page = () => {
 							<FocusMethod />
 
 							<div className="bg-white text-black flex justify-center p-4 sm:p-8 my-8">
-								<AlteredFocusOrder />
+								<FocusOrderAltered />
 							</div>
 							<p>
 								Note that the next element in the focus order

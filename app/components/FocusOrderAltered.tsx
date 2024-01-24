@@ -1,14 +1,21 @@
 "use client"
 import React, { useEffect, useRef, useState } from "react"
 
-const FocusOrder = () => {
+const FocusOrderAltered = () => {
 	const [text, setText] = useState<string>("")
 	const [showDialog, setShowDialog] = useState<boolean>(false)
 	const homeButtonRef = useRef<any>(null)
+	const closeBtnRef = useRef<any>(null)
 
 	const focusHomeButton = () => {
 		homeButtonRef.current?.focus()
 	}
+
+	useEffect(() => {
+		if (showDialog && closeBtnRef.current) {
+			closeBtnRef.current.focus()
+		}
+	}, [showDialog])
 
 	return (
 		<div className="flex flex-col relative">
@@ -21,7 +28,9 @@ const FocusOrder = () => {
 			<div className="mb-12 mx-auto">
 				{text !== "" ? "You clicked on " + text : ""}
 			</div>
-			<h2 className="font-bold text-lg mb-4">Example Focus Order Site</h2>
+			<h2 className="font-bold text-lg mb-4">
+				Example Altered Focus Order Site
+			</h2>
 			<nav className="flex flex-row gap-4">
 				<button
 					ref={homeButtonRef}
@@ -45,6 +54,19 @@ const FocusOrder = () => {
 			</nav>
 			<hr className="border-black border-1 my-8"></hr>
 			<div className="flex justify-items-center">
+				{showDialog && (
+					<div className="flex flex-col p-16 absolute bottom-1/3 bg-white border-orange-700 border-4 items-center  left-1/2 transform -translate-x-1/2">
+						<p>Example Message</p>
+						<button
+							ref={closeBtnRef}
+							onClick={() => setShowDialog(false)}
+							className="focus:bg-orange-700 focus:text-white border-orange-700 border-4 flex max-w-fit justify-center items-center bg-white text-black rounded p-4 mb-4"
+						>
+							Close
+						</button>
+					</div>
+				)}
+
 				<p>
 					Lorem ipsum dolor sit amet consectetur adipisicing elit.
 					Laboriosam, eius.
@@ -73,18 +95,6 @@ const FocusOrder = () => {
 				Open Dialog
 			</button>
 
-			{showDialog && (
-				<div className="flex flex-col p-16 absolute bottom-1/3 bg-white border-orange-700 border-4 items-center  left-1/2 transform -translate-x-1/2">
-					<p>Example Message</p>
-					<button
-						onClick={() => setShowDialog(false)}
-						className="focus:bg-orange-700 focus:text-white border-orange-700 border-4 flex max-w-fit justify-center items-center bg-white text-black rounded p-4 mb-4"
-					>
-						Close
-					</button>
-				</div>
-			)}
-
 			<hr className="border-black border-1 my-8"></hr>
 			<button
 				onClick={() => setText("Email me!")}
@@ -96,4 +106,4 @@ const FocusOrder = () => {
 	)
 }
 
-export default FocusOrder
+export default FocusOrderAltered
