@@ -51,6 +51,11 @@ const Page = () => {
 					<p>
 						This principle is all about users being able to see or
 						otherwise be made aware of the contents of a site.
+					</p>
+					<h3 className="text-center text-xl font-bold my-8">
+						Alternative Text
+					</h3>
+					<p>
 						Here&apos;s a simple example that most developers are
 						aware of:
 					</p>
@@ -106,8 +111,11 @@ const Page = () => {
 									alt="A computer keyboard and a mouse on a dark desk. A small light is reflected in the corner of the desk."
 								/>
 							</div>
-							<div className="mb-8 text-right text-sm underline">
-								<Link href="https://www.pexels.com/photo/apple-magic-keyboard-with-numeric-pad-on-table-near-wireless-mouse-1714205/">
+							<div className="mb-8 text-right text-sm">
+								<Link
+									className="underline"
+									href="https://www.pexels.com/photo/apple-magic-keyboard-with-numeric-pad-on-table-near-wireless-mouse-1714205/"
+								>
 									Photo by Josh Sorenson
 								</Link>
 							</div>

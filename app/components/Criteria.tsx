@@ -49,10 +49,8 @@ const Criteria: React.FC<CriteriaType> = ({
 						WCAG 2.2 Success Criterion {wcag}
 					</Link>{" "}
 					| EN {en} |{" "}
-					<Link href={webbLink}>
-						<span className="underline" lang="sv">
-							Webbriktlinjer: {webb}
-						</span>
+					<Link className="underline" href={webbLink}>
+						<span lang="sv">Webbriktlinjer: {webb}</span>
 					</Link>
 				</nav>
 			</div>
