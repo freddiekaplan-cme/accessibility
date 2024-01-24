@@ -94,9 +94,7 @@ const Page = () => {
 									<div>
 										&lt;img src=&#123;keyboardImage&#125;
 										alt=&quot;A computer keyboard and a
-										mouse on a dark desk. A small light is
-										reflected in the corner of the
-										desk.&quot;&gt;
+										mouse on a dark desk.&quot;&gt;
 									</div>
 								</code>
 							</div>
@@ -108,7 +106,7 @@ const Page = () => {
 							<div className="bg-white text-black flex justify-center p-4 sm:p-8 my-8">
 								<Image
 									src={keyboardImage}
-									alt="A computer keyboard and a mouse on a dark desk. A small light is reflected in the corner of the desk."
+									alt="A computer keyboard and a mouse on a dark desk."
 								/>
 							</div>
 							<div className="mb-8 text-right text-sm">
@@ -123,6 +121,11 @@ const Page = () => {
 								If you think it&apos;s hard to come up with an
 								alt text, imagine describing the image over the
 								phone to someone.
+							</p>
+							<p>
+								Remember, the texts should be succint and to the
+								point. A general rule of thumb is to keep them
+								under 100 characters.
 							</p>
 						</div>
 					</div>
@@ -318,8 +321,7 @@ const Page = () => {
 								<Image
 									className="border-black border-2 max-w-full sm:max-w-sm"
 									src={boxImage}
-									alt="A dark gray box with the words 'Lorem ipsum dolor sit amet, consectetur
-									adipis.' inside. The text is black and hard to make out against the background color. "
+									alt="A dark gray box with black example text, it's hard to read."
 								/>
 							</div>
 							<p>

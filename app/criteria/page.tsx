@@ -44,7 +44,7 @@ const Page = () => {
 				<Image
 					className="mt-8 mb-4"
 					src={collaborativeImg}
-					alt="A group of men behind a computer screen are discussing and pointing at the screen."
+					alt="A group of men are discussing and pointing at a computer monitor."
 				/>
 				<div className="mb-8 text-right text-sm underline">
 					<Link href="https://www.pexels.com/photo/team-discussing-project-at-a-computer-6804084/">

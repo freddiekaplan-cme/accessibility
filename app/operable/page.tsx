@@ -94,7 +94,7 @@ const Page = () => {
 					<Image
 						className="flex"
 						src={phoneImg}
-						alt="A younger woman is sitting on a bench in a park next to an older woman, she's holding a mobile phone."
+						alt="A younger woman is showing a mobile phone to an older woman."
 					/>
 					<div className="mb-8 text-right text-sm underline">
 						<Link href="https://www.pexels.com/photo/daughter-explaining-elderly-mother-how-using-smartphone-3791666/">

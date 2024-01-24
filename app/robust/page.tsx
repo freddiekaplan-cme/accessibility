@@ -70,7 +70,7 @@ const Page = () => {
 				<Image
 					className="mt-8 mb-4"
 					src={img}
-					alt="A woman working at a decorated office desk with three screens. The screens have  code on them."
+					alt="A woman working at an office desk with three screens with code."
 				/>
 				<div className="mb-8 text-right text-sm underline">
 					<Link href="https://www.pexels.com/photo/woman-coding-on-computer-3861958">
