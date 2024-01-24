@@ -76,12 +76,12 @@ const FocusOrderAltered = () => {
 			<div className="flex flex-col w-fit my-4">
 				<label
 					id="dropdownLabel"
-					htmlFor="dropdown"
+					htmlFor="dropdownAltered"
 					className="font-bold"
 				>
 					Choose an option:
 				</label>
-				<select id="dropdown" name="dropdown">
+				<select id="dropdownAltered" name="dropdownAltered">
 					<option value="Option 1">Option 1</option>
 					<option value="Option 2">Option 2</option>
 					<option value="Option 3">Option 3</option>
