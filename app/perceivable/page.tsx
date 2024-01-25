@@ -9,12 +9,12 @@ import {
 	ComparisonChart,
 	UpdatedComparisonChart,
 } from "../components/ComparisonChart"
-import { Chart, ChartAddedElements } from "../components/PercievableSnippets"
+import { Chart, ChartAddedElements } from "../components/PerceivableSnippets"
 import Link from "next/link"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-	title: "Percievable | Accessibility Project",
+	title: "Perceivable | Accessibility Project",
 }
 
 const Page = () => {
@@ -259,7 +259,12 @@ const Page = () => {
 					</p>
 					<p>
 						As a comparison, black text on a white background has a
-						contrast of 21:1.
+						contrast of 21:1. Read more about the levels on the page
+						about{" "}
+						<Link className="underline" href="/criteria">
+							WCAG Critera
+						</Link>
+						.
 					</p>
 					<div className="my-8 bg-slate-700 text-white">
 						<div className="p-4 sm:p-8">

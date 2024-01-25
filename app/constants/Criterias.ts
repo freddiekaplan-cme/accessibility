@@ -8,7 +8,7 @@ export const criteria = [
 		webbLink:
 			"https://www.digg.se/webbriktlinjer/alla-webbriktlinjer/beskriv-med-text-allt-innehall-som-inte-ar-text",
 		text: "All non-text content that is presented to the user has a text alternative that serves the equivalent purpose [...].",
-		principle: "percievable",
+		principle: "perceivable",
 		level: "A",
 	},
 	{
@@ -20,7 +20,7 @@ export const criteria = [
 		webbLink:
 			"https://www.digg.se/webbriktlinjer/alla-webbriktlinjer/anvand-inte-enbart-farg-for-att-formedla-information",
 		text: "Color is not used as the only visual means of conveying information, indicating an action, prompting a response, or distinguishing a visual element.",
-		principle: "percievable",
+		principle: "perceivable",
 		level: "A",
 	},
 	{
@@ -35,7 +35,7 @@ export const criteria = [
 		text2: "Large Text. Large-scale text and images of large-scale text have a contrast ratio of at least 3:1.",
 		text3: "Incidental. Text or images of text that are part of an inactive user interface component, that are pure decoration, that are not visible to anyone, or that are part of a picture that contains significant other visual content, have no contrast requirement.",
 		text4: "Logotypes. Text that is part of a logo or brand name has no contrast requirement.",
-		principle: "percievable",
+		principle: "perceivable",
 		level: "AA",
 	},
 	{
@@ -49,7 +49,7 @@ export const criteria = [
 		text: "The visual presentation of the following have a contrast ratio of at least 3:1 against adjacent color(s):",
 		text2: "User Interface Components. Visual information required to identify user interface components and states, except for inactive components or where the appearance of the component is determined by the user agent and not modified by the author;",
 		text3: "Graphical Objects. Parts of graphics required to understand the content, except when a particular presentation of graphics is essential to the information being conveyed.",
-		principle: "percievable",
+		principle: "perceivable",
 		level: "AA",
 	},
 	{

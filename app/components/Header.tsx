@@ -48,10 +48,10 @@ const Header = () => {
 			>
 				<Link
 					onClick={handleClick}
-					href="/percievable"
+					href="/perceivable"
 					className="underLineLink"
 				>
-					Percievable
+					Perceivable
 				</Link>
 				<Link
 					onClick={handleClick}
