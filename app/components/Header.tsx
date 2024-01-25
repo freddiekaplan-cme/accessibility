@@ -27,7 +27,9 @@ const Header = () => {
 		<header className="p-4 sm:p-8">
 			<div className="flex flex-row sm:flex-col justify-between">
 				<h1 className="flex flex-row font-bold text-3xl items-center">
-					<Link href={"/"}>Accessibility Project</Link>
+					<Link aria-label="Home" href={"/"}>
+						Accessibility Project
+					</Link>
 				</h1>
 				<button
 					className="flex sm:hidden flex-col gap-1 items-end h-12 w-12 justify-center"

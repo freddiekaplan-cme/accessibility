@@ -12,7 +12,10 @@ import {
 	FormLabelledBy,
 	FormWithPlaceholder,
 	MyForm,
+	SiteDivs,
+	SiteSemantic,
 } from "../components/RobustSnippets"
+import DivSite from "../components/DivSite"
 
 export const metadata: Metadata = {
 	title: "Robust | Accessibility Project",
@@ -40,10 +43,18 @@ const Page = () => {
 						mind. For the most part, using semantic HTML gives you
 						this automatically.
 					</p>
+					<h3 className="text-center text-xl font-bold my-8">
+						Semantic HTML
+					</h3>
+					<p>
+						Semantic elements describes their meaning to the browser
+						as well as the developer. Let&apos;s take a look at an
+						example, using a simple dummy site:
+					</p>
 					<div className="my-8 bg-slate-700 text-white">
 						<div className="p-4 sm:p-8">
 							<h4 className="mb-4 font-bold">
-								Example: Semantic HTML
+								Example: Divs or Semantic Elements?
 							</h4>
 							<p>
 								Using{" "}
@@ -62,6 +73,31 @@ const Page = () => {
 								helps assistive technologies like screen readers
 								to navigate the site and are considered best
 								practices.
+							</p>
+
+							<div className="bg-white text-black flex justify-center p-4 sm:p-8 my-8">
+								<DivSite />
+							</div>
+							<p>
+								As long as the elements get the same styling,
+								the result on screen will be the same.
+								Here&apos;s a version made with non-semantic
+								elements:
+							</p>
+
+							<SiteDivs />
+
+							<p>
+								Compare it to this version using semantic HTML
+								elements:
+							</p>
+
+							<SiteSemantic />
+
+							<p>
+								The semantic version is easier to read and
+								understand, and much better from an
+								accessibility standpoint.
 							</p>
 						</div>
 					</div>

@@ -1,4 +1,113 @@
 import React from "react"
+import Code from "./Code"
+
+export const SiteDivs = () => {
+	return (
+		<>
+			<div className="bg-slate-800 text-white my-8">
+				<code>
+					<Code text="<div>" indent={0} />
+					<Code text="<div>" indent={1} />
+
+					<Code text="<div>Example Site</div>" indent={2} />
+					<Code text="<div>" indent={2} />
+					<Code text="<div>" indent={3} />
+					<Code text='<a href="/">Home</a>' indent={4} />
+					<Code text="</div>" indent={3} />
+					<Code text="<div>" indent={3} />
+					<Code text='<a href="/about">About</a>' indent={4} />
+					<Code text="</div>" indent={3} />
+					<Code text="<div>" indent={3} />
+					<Code text='<a href="/contact">Contact</a>' indent={4} />
+					<Code text="</div>" indent={3} />
+					<Code text="</div>" indent={2} />
+
+					<Code text="</div>" indent={1} margin={true} />
+
+					<Code text="<div>" indent={1} />
+					<Code text="<div>" indent={2} />
+					<Code
+						text="<div>Lorem ipsum dolor sit amet</div>"
+						indent={3}
+					/>
+					<Code
+						text="<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, eius.</div>"
+						indent={3}
+					/>
+					<Code text="</div>" indent={2} />
+					<Code text="<div>" indent={2} />
+					<Code text="<div>Lorem, ipsum dolor</div>" indent={3} />
+					<Code
+						text="<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil excepturi maxime distinctio! Quis, ducimus sed.</div>"
+						indent={3}
+					/>
+					<Code text="</div>" indent={2} />
+					<Code text="</div>" indent={1} margin={true} />
+
+					<Code text="<div>" indent={1} />
+					<Code text="© My Site" indent={2} />
+					<Code text="</div>" indent={1} />
+
+					<Code text="</div>" indent={0} />
+				</code>
+			</div>
+		</>
+	)
+}
+
+export const SiteSemantic = () => {
+	return (
+		<>
+			<div className="bg-slate-800 text-white my-8">
+				<code>
+					<Code text="<div>" indent={0} />
+					<Code text="<header>" indent={1} />
+
+					<Code text="<h1>Example Site</h1>" indent={2} />
+					<Code text="<nav>" indent={2} />
+					<Code text="<button>" indent={3} />
+					<Code text='<a href="/">Home</a>' indent={4} />
+					<Code text="</button>" indent={3} />
+					<Code text="<button>" indent={3} />
+					<Code text='<a href="/about">About</a>' indent={4} />
+					<Code text="</button>" indent={3} />
+					<Code text="<button>" indent={3} />
+					<Code text='<a href="/contact">Contact</a>' indent={4} />
+					<Code text="</button>" indent={3} />
+					<Code text="</nav>" indent={2} />
+
+					<Code text="</header>" indent={1} margin={true} />
+
+					<Code text="<main>" indent={1} />
+					<Code text="<article>" indent={2} />
+					<Code
+						text="<h2>Lorem ipsum dolor sit amet</h2>"
+						indent={3}
+					/>
+					<Code
+						text="<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, eius.</p>"
+						indent={3}
+					/>
+					<Code text="</article>" indent={2} />
+					<Code text="<article>" indent={2} />
+					<Code text="<h2>Lorem, ipsum dolor</h2>" indent={3} />
+					<Code
+						text="<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil excepturi maxime distinctio! Quis, ducimus sed.</p>"
+						indent={3}
+					/>
+					<Code text="</article>" indent={2} />
+					<Code text="</main>" indent={1} margin={true} />
+
+					<Code text="<footer>" indent={1} />
+					<Code text="© My Site" indent={2} />
+					<Code text="</footer>" indent={1} />
+
+					<Code text="</div>" indent={0} />
+				</code>
+			</div>
+		</>
+	)
+}
 
 export const MyForm = () => {
 	return (

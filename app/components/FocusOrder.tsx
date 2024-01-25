@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect, useRef, useState } from "react"
+import React, { useRef, useState } from "react"
 
 const FocusOrder = () => {
 	const [text, setText] = useState<string>("")
@@ -21,7 +21,9 @@ const FocusOrder = () => {
 			<div className="mb-12 mx-auto">
 				{text !== "" ? "You clicked on " + text : ""}
 			</div>
-			<h2 className="font-bold text-lg mb-4">Example Focus Order Site</h2>
+			<div className="font-bold text-lg mb-4">
+				Example Focus Order Site
+			</div>
 			<nav className="flex flex-row gap-4">
 				<button
 					ref={homeButtonRef}
