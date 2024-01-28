@@ -21,8 +21,8 @@ const Criteria: React.FC<CriteriaType> = ({
 		<>
 			<div className="my-8 bg-sky-800 p-4 sm:p-8 text-white">
 				<h4 className="font-bold text-lg">{criteriaTitle}</h4>
-				{level && principle && (
-					<div className="flex flex-row gap-4">
+				<div className="flex flex-row gap-4">
+					{principle && (
 						<div>
 							<Link href={`/${principle}`}>
 								Principle:{" "}
@@ -32,9 +32,9 @@ const Criteria: React.FC<CriteriaType> = ({
 								</span>
 							</Link>
 						</div>
-						<div>Level: {level}</div>
-					</div>
-				)}
+					)}
+					{level && <div>Level: {level}</div>}
+				</div>
 				<p>{text}</p>
 				{text2 && (
 					<ul className="ml-4">

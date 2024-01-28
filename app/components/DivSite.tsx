@@ -18,19 +18,19 @@ const DivSite = () => {
 					<div className="flex flex-row gap-4">
 						<button
 							onClick={() => setText("Home")}
-							className="bg-white rounded text-black p-2"
+							className="text-white p-2 underline font-bold"
 						>
 							Home
 						</button>
 						<button
 							onClick={() => setText("About")}
-							className="bg-white rounded text-black p-2"
+							className="text-white p-2 underline font-bold"
 						>
 							About
 						</button>
 						<button
 							onClick={() => setText("Contact")}
-							className="bg-white rounded text-black p-2"
+							className="text-white p-2 underline font-bold"
 						>
 							Contact
 						</button>

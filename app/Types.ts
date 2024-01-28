@@ -37,6 +37,12 @@ export interface LabelledFormDataType {
 	familyName: string
 }
 
+export interface LabelledFormRequiredDataType {
+	givenName: string
+	familyName: string
+	title: string
+}
+
 export interface AgeFormDataType {
 	age: number | null
 }

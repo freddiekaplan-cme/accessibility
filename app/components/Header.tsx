@@ -24,7 +24,13 @@ const Header = () => {
 	}, [])
 
 	return (
-		<header className="p-4 sm:p-8">
+		<header className="relative p-4 sm:p-8">
+			<Link
+				className="absolute top-[-100%] focus:top-0 left-0 pl-8 bg-orange-700 text-white font-bold w-full"
+				href="#pageTitle"
+			>
+				Skip to content
+			</Link>
 			<div className="flex flex-row sm:flex-col justify-between">
 				<h1 className="flex flex-row font-bold text-3xl items-center">
 					<Link aria-label="Home" href={"/"}>

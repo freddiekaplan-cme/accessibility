@@ -375,21 +375,44 @@ const Page = () => {
 							<div className="bg-white text-black flex justify-center p-4 sm:p-8 my-8">
 								<FocusOrderAltered />
 							</div>
+							<p>A few notes:</p>
 							<p>
-								Note that the next element in the focus order
-								after the &quot;Close&quot; button is the
-								dropdown <code>&lt;select&gt;</code>, which
-								probably will be confusing for a user. This is
-								not desirable since the focus order should be
-								predictable and easy to understand.
+								The next element in the focus order after the
+								&quot;Close&quot; button is the dropdown{" "}
+								<code>&lt;select&gt;</code>, which probably will
+								be confusing for a user. This is not desirable
+								since the focus order should be predictable and
+								easy to understand.
 							</p>
 							<p>
-								A final note: While using the <code>ref</code>{" "}
-								tag and the <code>focus()</code> method can come
-								in handy, it&apos;s a good idea to use them
-								sparingly. Aim to set up your site so that the
-								focus order is straightforward and easy to
-								follow.
+								While using the <code>ref</code> tag and the{" "}
+								<code>focus()</code> method can come in handy,
+								it&apos;s a good idea to use them sparingly. Aim
+								to set up your site so that the focus order is
+								straightforward and easy to follow.
+							</p>
+							<p>
+								I&apos;m using a non-semantic{" "}
+								<code>&lt;div&gt;</code> for the dialog box, but
+								you should use the <code>&lt;dialog&gt;</code>{" "}
+								element which comes with some built in
+								functionalty and even moves focus to the dialog
+								automatically when opened. Read more over at{" "}
+								<Link
+									className="underline"
+									href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog"
+								>
+									MDN
+								</Link>{" "}
+								and consult{" "}
+								<Link
+									className="underline"
+									href="https://caniuse.com/?search=dialog"
+								>
+									CanIUse
+								</Link>{" "}
+								to find out which browser versions support the
+								element.
 							</p>
 						</div>
 					</div>

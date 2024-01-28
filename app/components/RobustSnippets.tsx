@@ -8,22 +8,13 @@ export const SiteDivs = () => {
 				<code>
 					<Code text="<div>" indent={0} />
 					<Code text="<div>" indent={1} />
-
 					<Code text="<div>Example Site</div>" indent={2} />
 					<Code text="<div>" indent={2} />
-					<Code text="<div>" indent={3} />
-					<Code text='<a href="/">Home</a>' indent={4} />
-					<Code text="</div>" indent={3} />
-					<Code text="<div>" indent={3} />
-					<Code text='<a href="/about">About</a>' indent={4} />
-					<Code text="</div>" indent={3} />
-					<Code text="<div>" indent={3} />
-					<Code text='<a href="/contact">Contact</a>' indent={4} />
-					<Code text="</div>" indent={3} />
+					<Code text='<a href="/">Home</a>' indent={3} />
+					<Code text='<a href="/about">About</a>' indent={3} />
+					<Code text='<a href="/contact">Contact</a>' indent={3} />
 					<Code text="</div>" indent={2} />
-
 					<Code text="</div>" indent={1} margin={true} />
-
 					<Code text="<div>" indent={1} />
 					<Code text="<div>" indent={2} />
 					<Code
@@ -65,15 +56,9 @@ export const SiteSemantic = () => {
 
 					<Code text="<h1>Example Site</h1>" indent={2} />
 					<Code text="<nav>" indent={2} />
-					<Code text="<button>" indent={3} />
-					<Code text='<a href="/">Home</a>' indent={4} />
-					<Code text="</button>" indent={3} />
-					<Code text="<button>" indent={3} />
-					<Code text='<a href="/about">About</a>' indent={4} />
-					<Code text="</button>" indent={3} />
-					<Code text="<button>" indent={3} />
-					<Code text='<a href="/contact">Contact</a>' indent={4} />
-					<Code text="</button>" indent={3} />
+					<Code text='<a href="/">Home</a>' indent={3} />
+					<Code text='<a href="/about">About</a>' indent={3} />
+					<Code text='<a href="/contact">Contact</a>' indent={3} />
 					<Code text="</nav>" indent={2} />
 
 					<Code text="</header>" indent={1} margin={true} />
