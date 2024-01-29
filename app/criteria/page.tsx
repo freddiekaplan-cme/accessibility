@@ -46,11 +46,17 @@ const Page = () => {
 					src={collaborativeImg}
 					alt="A group of men are discussing and pointing at a computer monitor."
 				/>
-				<div className="mb-8 text-right text-sm underline">
-					<Link href="https://www.pexels.com/photo/team-discussing-project-at-a-computer-6804084/">
+				<div className="mb-8 text-right text-sm">
+					<Link
+						className="underline"
+						href="https://www.pexels.com/photo/team-discussing-project-at-a-computer-6804084/"
+					>
 						Photo by cottonbro studio
 					</Link>
 				</div>
+				<h3 className="text-center text-xl font-bold mb-8">
+					WCAG Criteria Reference
+				</h3>
 
 				{criteria.map((item) => (
 					<Criteria
