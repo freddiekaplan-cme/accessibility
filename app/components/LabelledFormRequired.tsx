@@ -60,14 +60,17 @@ const LabelledFormRequired = () => {
 			</div>
 
 			<div className="flex flex-col gap-2">
-				<label className="flex items-center" htmlFor="familyName">
+				<label
+					className="flex items-center"
+					htmlFor="familyNameRequired"
+				>
 					Family&nbsp;Name:&nbsp;*
 				</label>
 				<input
 					className="p-2 border-black border-solid border-2"
 					type="text"
-					id="familyName"
-					name="familyName"
+					id="familyNameRequired"
+					name="familyNameRequired"
 					value={formData.familyName}
 					onChange={handleChange}
 					required

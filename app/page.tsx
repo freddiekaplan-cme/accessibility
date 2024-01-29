@@ -76,7 +76,7 @@ export default function Home() {
 						alt="Asian judge working on laptop in office."
 						loading="lazy"
 					/>
-					<div className="mb-8 text-right text-sm underline">
+					<div className="mb-8 text-right text-sm">
 						<Link
 							className="underline"
 							href="https://www.pexels.com/photo/crop-asian-judge-working-on-laptop-in-office-5668772/"
