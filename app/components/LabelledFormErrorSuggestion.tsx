@@ -37,14 +37,17 @@ const LabelledFormErrorSuggestion = () => {
 			<div>Required *</div>
 
 			<div className="flex flex-row gap-2">
-				<label className="flex items-center" htmlFor="name">
+				<label
+					className="flex items-center"
+					htmlFor="nameErrorSuggestion"
+				>
 					Full&nbsp;Name&nbsp;*
 				</label>
 				<input
 					className="p-2 border-black border-solid border-2"
 					type="text"
-					id="name"
-					name="name"
+					id="nameErrorSuggestion"
+					name="nameErrorSuggestion"
 					value={formDataErrorSuggestion.name}
 					onChange={handleChange}
 					required

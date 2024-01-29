@@ -24,12 +24,10 @@ const Criteria: React.FC<CriteriaType> = ({
 				<div className="flex flex-row gap-4">
 					{principle && (
 						<div>
-							<Link href={`/${principle}`}>
-								Principle:{" "}
-								<span className="underline">
-									{principle.charAt(0).toUpperCase() +
-										principle.slice(1)}
-								</span>
+							Principle:{" "}
+							<Link className="underline" href={`/${principle}`}>
+								{principle.charAt(0).toUpperCase() +
+									principle.slice(1)}
 							</Link>
 						</div>
 					)}

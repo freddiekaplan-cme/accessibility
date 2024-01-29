@@ -25,10 +25,13 @@ export default function Home() {
 					<Image
 						className="mt-8 mb-4"
 						src={pointingImg}
-						alt="Two women are looking at a computer screen with code on it. One of them is pointing at particular part of the code."
+						alt="Two women are looking and pointing at a computer screen with code on it."
 					/>
-					<div className="mb-8 text-right text-sm underline">
-						<Link href="https://www.pexels.com/photo/two-women-looking-at-the-code-at-laptop-1181263/">
+					<div className="mb-8 text-right text-sm">
+						<Link
+							className="underline"
+							href="https://www.pexels.com/photo/two-women-looking-at-the-code-at-laptop-1181263/"
+						>
 							Photo by Christina Morillo
 						</Link>
 					</div>
@@ -74,7 +77,10 @@ export default function Home() {
 						loading="lazy"
 					/>
 					<div className="mb-8 text-right text-sm underline">
-						<Link href="https://www.pexels.com/photo/crop-asian-judge-working-on-laptop-in-office-5668772/">
+						<Link
+							className="underline"
+							href="https://www.pexels.com/photo/crop-asian-judge-working-on-laptop-in-office-5668772/"
+						>
 							Photo by Sora Shimazaki
 						</Link>
 					</div>

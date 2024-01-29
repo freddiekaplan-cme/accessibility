@@ -108,8 +108,11 @@ const Page = () => {
 					src={img}
 					alt="A woman working at an office desk with three screens with code."
 				/>
-				<div className="mb-8 text-right text-sm underline">
-					<Link href="https://www.pexels.com/photo/woman-coding-on-computer-3861958">
+				<div className="mb-8 text-right text-sm">
+					<Link
+						className="underline"
+						href="https://www.pexels.com/photo/woman-coding-on-computer-3861958"
+					>
 						Photo by ThisIsEngineering
 					</Link>
 				</div>
