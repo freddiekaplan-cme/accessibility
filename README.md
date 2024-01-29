@@ -51,7 +51,7 @@ Extensive research involved exploring Swedish sources, linking to WCAG's officia
 
 ## Tech Stack
 
-The tech stack includes React with Next.js, Typescript, and Tailwind for styling. Despite expectations, some tools, such as Next.js, did not fully support accessibility.
+The tech stack includes React with Next.js, Typescript, and Tailwind for styling. Despite expectations, apart from ESLint the tools didn't help with accessibility.
 
 ### Next.js
 
@@ -59,11 +59,11 @@ During testing, Next.js' built-in alert box posed accessibility challenges durin
 
 ### Tailwind
 
-While Tailwind streamlined styling, it did not actively contribute to accessibility. Challenges arose when combining Tailwind with regular CSS in the global stylesheet.
+While Tailwind streamlined styling, it did not actively contribute to accessibility.
 
 ### ESLint
 
-ESLint, used with axe-core/react, served as a static checker for accessibility rules but provided limited assistance. Challenges arose, suggesting potential growth in tool capabilities.
+ESLint, [https://www.npmjs.com/package/eslint-plugin-jsx-a11y](eslint-plugin-jsx-a11y) used with axe-core/react, served as a static checker for accessibility rules but provided limited assistance during development.
 
 ## Testing
 
